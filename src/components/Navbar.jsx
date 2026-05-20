@@ -162,7 +162,7 @@ export default function Navbar() {
                 </a>
 
                 <p className="px-2 text-center text-xs leading-5 text-slate-500">
-                  Atendimento sujeito à análise individual do caso, sem promessa de resultado.
+                  Atendimento sujeito à análise individual do caso.
                 </p>
               </div>
             </motion.aside>

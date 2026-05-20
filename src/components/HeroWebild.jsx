@@ -105,7 +105,7 @@ export default function HeroWebild() {
                   <div>
                     <h3 className="font-semibold text-slate-950">Orientação responsável</h3>
                     <p className="mt-1 text-sm text-slate-600">
-                      Atendimento técnico, transparente e sem promessa de resultado.
+                      Atendimento técnico e transparente.
                     </p>
                   </div>
                 </div>

@@ -87,7 +87,7 @@ export default function LocationMap() {
                 <div>
                   <p className="font-semibold text-slate-950">Agendamento</p>
                   <p className="mt-1 text-sm leading-6 text-slate-600">
-                    Consulte disponibilidade pelo WhatsApp antes de comparecer.
+                    Prontos para te receber e ouvir sua história. Agende seu atendimento pelo WhatsApp.
                   </p>
                 </div>
               </div>

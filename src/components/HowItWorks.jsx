@@ -44,7 +44,7 @@ export default function HowItWorks() {
           </h2>
 
           <p className="mx-auto mt-4 max-w-2xl text-slate-600">
-            O objetivo é tirar você da dúvida e indicar os próximos passos com segurança,
+            O objetivo é tirar sua dúvida e indicar os próximos passos com segurança,
             organização e transparência.
           </p>
         </motion.div>
