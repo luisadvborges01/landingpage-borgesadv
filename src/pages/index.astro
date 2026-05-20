@@ -1,16 +1,37 @@
 ---
 import '../styles/global.css';
-import Hero from '../components/Hero.jsx';
+
+import Navbar from '../components/Navbar.jsx';
+import HeroWebild from '../components/HeroWebild.jsx';
+import Lawyers from '../components/Lawyers.jsx';
+import Areas from '../components/Areas.jsx';
+import WhyChoose from '../components/WhyChoose.jsx';
+import Testimonials from '../components/Testimonials.jsx';
+import ContactCTA from '../components/ContactCTA.jsx';
+import FloatingWhatsApp from '../components/FloatingWhatsApp.jsx';
 ---
 
 <html lang="pt-BR">
   <head>
     <meta charset="utf-8" />
-    <title>BorgesPrev | Advocacia Previdenciária</title>
+    <title>Borges Advocacia | Direito Previdenciário</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Borges Advocacia. Atendimento previdenciário humanizado em Goiânia para aposentadorias, BPC/LOAS, pensões, revisões e benefícios do INSS."
+    />
   </head>
 
   <body>
-    <Hero client:load />
+    <Navbar client:load />
+    <main>
+      <HeroWebild client:load />
+      <Lawyers client:load />
+      <Areas client:load />
+      <WhyChoose client:load />
+      <Testimonials client:load />
+      <ContactCTA client:load />
+    </main>
+    <FloatingWhatsApp client:load />
   </body>
 </html>
