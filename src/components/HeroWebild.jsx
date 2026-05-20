@@ -1,6 +1,9 @@
 import { motion } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
 
+const WHATSAPP_URL =
+  "https://wa.me/556293161779?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20um%20benefício%20do%20INSS.";
+
 const item = {
   hidden: { opacity: 0, y: 26 },
   show: { opacity: 1, y: 0 },
@@ -48,7 +51,9 @@ export default function HeroWebild() {
               className="mt-8 flex flex-col gap-3 sm:flex-row"
             >
               <a
-                href="https://wa.me/556293161779"
+                href={"https://wa.me/556293161779"}
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-[#174b9a] px-7 py-4 text-sm font-bold text-white shadow-2xl shadow-blue-900/20 transition hover:-translate-y-1 hover:bg-[#0d2f68]"
               >
                 Falar no WhatsApp

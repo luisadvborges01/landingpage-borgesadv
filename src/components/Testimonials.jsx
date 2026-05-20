@@ -95,10 +95,10 @@ export default function Testimonials() {
           </p>
         </motion.div>
 
-        <div className="relative mt-10">
+        <div className="carousel-shell mt-10 px-0 pb-2 pt-1">
           <div
             ref={carouselRef}
-            className="hide-scrollbar flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth pb-8"
+            className="carousel-track hide-scrollbar flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth px-1 pb-8 pt-2"
           >
             {testimonials.map((item, index) => (
               <motion.article
@@ -110,10 +110,7 @@ export default function Testimonials() {
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.65, delay: index * 0.1 }}
-                whileHover={{
-                  y: -10,
-                  scale: 1.015,
-                }}
+                whileHover={{ y: -10, scale: 1.015 }}
                 className="glass-card flex min-h-[360px] min-w-[360px] snap-start flex-col justify-between rounded-[32px] p-8 transition md:min-w-[520px]"
               >
                 <div>
@@ -152,7 +149,7 @@ export default function Testimonials() {
             ))}
           </div>
 
-          <div className="mt-2 flex items-center justify-center gap-4">
+          <div className="relative z-10 mt-1 flex items-center justify-center gap-4">
             <button
               type="button"
               onClick={prev}

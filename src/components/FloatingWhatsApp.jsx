@@ -1,10 +1,13 @@
 import { motion } from "motion/react";
 
+const WHATSAPP_URL =
+  "https://wa.me/556293161779?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20um%20benefício%20do%20INSS.";
+
 function WhatsAppIcon() {
   return (
     <svg
       viewBox="0 0 32 32"
-      className="h-7 w-7"
+      className="h-8 w-8"
       fill="currentColor"
       aria-hidden="true"
     >
@@ -13,35 +16,35 @@ function WhatsAppIcon() {
   );
 }
 
-export default function FloatingWhatsApp() {9
+export default function FloatingWhatsApp() {
   return (
     <motion.a
-      href="https://wa.me/556293161779"
+      href={"https://wa.me/556293161779"}
       target="_blank"
       rel="noreferrer"
-      initial={{ opacity: 0, scale: 0.7, y: 20 }}
+      initial={{ opacity: 0, scale: 0.72, y: 20 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: 1 }}
-      whileHover={{
-        y: -6,
-        scale: 1.08,
-      }}
-      whileTap={{ scale: 0.95 }}
-      className="fixed bottom-6 right-6 z-50 grid h-16 w-16 place-items-center rounded-full bg-[#25D366] text-white shadow-2xl shadow-emerald-900/35 transition"
+      transition={{ duration: 0.65, delay: 1 }}
+      whileHover={{ y: -7, scale: 1.08 }}
+      whileTap={{ scale: 0.94 }}
+      className="fixed bottom-6 right-6 z-50 grid h-16 w-16 place-items-center rounded-full bg-[#25D366] text-white shadow-2xl shadow-emerald-900/35"
       aria-label="Falar no WhatsApp"
     >
       <motion.span
         animate={{
           scale: [1, 1.12, 1],
+          rotate: [0, -3, 3, 0],
         }}
         transition={{
-          duration: 1.8,
+          duration: 2.2,
           repeat: Infinity,
           ease: "easeInOut",
         }}
       >
         <WhatsAppIcon />
       </motion.span>
+
+      <span className="absolute inset-0 -z-10 rounded-full bg-[#25D366] opacity-35 blur-xl" />
     </motion.a>
   );
 }

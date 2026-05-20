@@ -3,6 +3,7 @@
 :root {
   --blue: #174b9a;
   --blue-dark: #0d2f68;
+  --blue-soft: #e8f0fb;
   --text: #071525;
   --muted: #4b5a6a;
   --bg: #eef5fb;
@@ -10,15 +11,16 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #2455a6 #f4f8fd;
 }
 
 body {
   margin: 0;
   background:
-    linear-gradient(rgba(23, 75, 154, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(23, 75, 154, 0.035) 1px, transparent 1px),
-    #eef5fb;
-  background-size: 64px 64px;
+    radial-gradient(circle at top left, rgba(23, 75, 154, 0.07), transparent 34rem),
+    radial-gradient(circle at bottom right, rgba(37, 99, 235, 0.055), transparent 36rem),
+    linear-gradient(180deg, #f7fbff 0%, #eef5fb 46%, #f9fcff 100%);
   color: var(--text);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   overflow-x: hidden;
@@ -29,15 +31,27 @@ body {
   color: white;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .page-section {
   width: min(1120px, calc(100% - 32px));
   margin-inline: auto;
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.74);
-  border: 1px solid rgba(255, 255, 255, 0.78);
-  box-shadow: 0 28px 80px rgba(13, 47, 104, 0.08);
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow:
+    0 18px 45px rgba(13, 47, 104, 0.055),
+    inset 0 1px 0 rgba(255, 255, 255, 0.82);
   backdrop-filter: blur(18px);
 }
 
@@ -51,4 +65,118 @@ body {
 
 .hide-scrollbar {
   scrollbar-width: none;
+}
+
+/* ===== Carrosséis limpos ===== */
+/* Isso remove o "quadrado azul" que estava aparecendo atrás/embaixo dos cards */
+.carousel-shell {
+  position: relative;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  overflow: visible !important;
+}
+
+.carousel-shell::before,
+.carousel-shell::after {
+  content: none !important;
+  display: none !important;
+}
+
+.carousel-track {
+  position: relative;
+  z-index: 1;
+  background: transparent !important;
+}
+
+/* Uma sombra mais bonita direto nos cards, sem bloco azul por baixo */
+.carousel-track .glass-card {
+  box-shadow:
+    0 18px 42px rgba(13, 47, 104, 0.06),
+    0 2px 10px rgba(13, 47, 104, 0.035),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+/* ===== Scrollbar premium ===== */
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(180deg, #f8fbff 0%, #edf5fc 100%);
+  border-left: 1px solid rgba(23, 75, 154, 0.07);
+}
+
+::-webkit-scrollbar-thumb {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.28), transparent 34%),
+    linear-gradient(180deg, #2d67c2 0%, #174b9a 100%);
+  border-radius: 999px;
+  border: 3px solid #f1f6fc;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.38),
+    0 8px 18px rgba(23, 75, 154, 0.18);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.32), transparent 34%),
+    linear-gradient(180deg, #3975d1 0%, #103b7b 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    0 10px 22px rgba(23, 75, 154, 0.24);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(180deg, #123f83 0%, #0b2c5d 100%);
+}
+
+::-webkit-scrollbar-corner {
+  background: #eef5fb;
+}
+
+@media (max-width: 768px) {
+  .page-section {
+    width: min(100% - 24px, 1120px);
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+}
+/* ===== Texto branco nos botões azuis ===== */
+button[class*="bg-blue"],
+a[class*="bg-blue"],
+.bg-\[\#174b9a\],
+.bg-\[\#1d4ed8\],
+.bg-\[\#2563eb\],
+.bg-blue-600,
+.bg-blue-700,
+.bg-blue-800 {
+  color: #ffffff !important;
+}
+
+button[class*="bg-blue"] *,
+a[class*="bg-blue"] *,
+.bg-\[\#174b9a\] *,
+.bg-\[\#1d4ed8\] *,
+.bg-\[\#2563eb\] *,
+.bg-blue-600 *,
+.bg-blue-700 *,
+.bg-blue-800 * {
+  color: #ffffff !important;
+}
+
+/* ícones dentro dos botões azuis */
+button[class*="bg-blue"] svg,
+a[class*="bg-blue"] svg,
+.bg-\[\#174b9a\] svg,
+.bg-\[\#1d4ed8\] svg,
+.bg-\[\#2563eb\] svg,
+.bg-blue-600 svg,
+.bg-blue-700 svg,
+.bg-blue-800 svg {
+  stroke: #ffffff !important;
+  color: #ffffff !important;
 }

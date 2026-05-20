@@ -105,10 +105,10 @@ export default function Areas() {
           </p>
         </motion.div>
 
-        <div className="relative mt-12">
+        <div className="carousel-shell mt-12 px-0 pb-2 pt-1">
           <div
             ref={carouselRef}
-            className="hide-scrollbar flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth pb-8"
+            className="carousel-track hide-scrollbar flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth px-1 pb-8 pt-2"
           >
             {areas.map((area, index) => {
               const Icon = area.icon;
@@ -123,17 +123,12 @@ export default function Areas() {
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   viewport={{ once: true, margin: "-60px" }}
                   transition={{ duration: 0.65, delay: index * 0.08 }}
-                  whileHover={{
-                    y: -14,
-                    scale: 1.025,
-                  }}
+                  whileHover={{ y: -14, scale: 1.025 }}
                   className="glass-card group min-w-[310px] snap-start rounded-[30px] p-7 transition md:min-w-[350px]"
                 >
                   <div className="mb-20 flex justify-center">
                     <motion.div
-                      whileHover={{
-                        rotate: [0, -6, 6, 0],
-                      }}
+                      whileHover={{ rotate: [0, -6, 6, 0] }}
                       transition={{ duration: 0.45 }}
                       className="relative grid h-24 w-24 place-items-center rounded-full bg-[#174b9a] text-white shadow-2xl shadow-blue-900/25 transition group-hover:bg-[#0d2f68]"
                     >
@@ -155,7 +150,7 @@ export default function Areas() {
             })}
           </div>
 
-          <div className="mt-2 flex items-center justify-center gap-4">
+          <div className="relative z-10 mt-1 flex items-center justify-center gap-4">
             <button
               type="button"
               onClick={prev}
