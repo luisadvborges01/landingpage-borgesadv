@@ -1,8 +1,8 @@
 import { motion } from "motion/react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, MessageCircle } from "lucide-react";
 
 const WHATSAPP_URL =
-  "https://wa.me/5562999999999?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20um%20benefício%20do%20INSS.";
+  "https://wa.me/556293161779?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20um%20benefício%20do%20INSS.";
 
 export default function ContactCTA() {
   return (
@@ -15,16 +15,21 @@ export default function ContactCTA() {
           transition={{ duration: 0.75 }}
           className="glass-card rounded-[38px] px-6 py-20 text-center md:px-16"
         >
+          <div className="mx-auto mb-5 grid h-14 w-14 place-items-center rounded-2xl bg-[#174b9a] text-white shadow-xl shadow-blue-900/20">
+            <MessageCircle size={26} />
+          </div>
+
           <div className="mx-auto mb-5 w-fit rounded-full bg-white px-4 py-2 text-sm font-medium text-[#174b9a]">
-            Contato
+            Atendimento
           </div>
 
           <h2 className="mx-auto max-w-2xl text-4xl font-semibold tracking-[-0.05em] text-slate-950 md:text-6xl">
-            Fale com nosso escritório
+            Está com problema no INSS?
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-slate-600">
-            Conte brevemente sua situação e nossa equipe irá orientar você sobre os próximos passos.
+            Envie uma mensagem para nossa equipe, conte brevemente sua situação e receba
+            orientação sobre os próximos passos possíveis.
           </p>
 
           <div className="mx-auto mt-8 flex max-w-xl flex-col gap-3 sm:flex-row">
@@ -39,15 +44,15 @@ export default function ContactCTA() {
             </a>
 
             <a
-              href="tel:+5562993161779"
+              href="#localizacao"
               className="inline-flex flex-1 items-center justify-center rounded-full border border-slate-200 bg-white px-7 py-4 text-sm font-bold text-slate-950 transition hover:-translate-y-1"
             >
-              Ligar para o escritório
+              Ver localização
             </a>
           </div>
 
           <p className="mt-5 text-xs text-slate-500">
-            Atendimento sujeito à análise individual do caso.
+            O atendimento não representa promessa de resultado. Cada caso será analisado individualmente.
           </p>
         </motion.div>
       </div>

@@ -4,26 +4,26 @@ import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    title: "Atendimento acolhedor",
-    text: "Fui muito bem orientado desde o primeiro contato. Explicaram tudo com calma e atenção.",
+    title: "Entendi o que estava acontecendo",
+    text: "Fui atendido com calma e consegui entender melhor o motivo do problema com meu benefício. A orientação foi clara desde o primeiro contato.",
     name: "Pedro Mendes",
     date: "06/2024",
   },
   {
-    title: "Orientação clara",
-    text: "O atendimento foi atencioso e me ajudou a entender melhor minha situação previdenciária.",
+    title: "Atendimento humano em momento difícil",
+    text: "Procurei o escritório porque estava insegura com a situação no INSS. Fui ouvida com paciência e recebi explicações que me ajudaram muito.",
     name: "Maria Silva",
     date: "10/2024",
   },
   {
-    title: "Equipe preparada",
-    text: "Recebi acompanhamento e informações claras durante o atendimento. Me senti seguro durante todo o processo.",
+    title: "Organização e clareza",
+    text: "A equipe explicou quais documentos eram importantes e quais seriam os próximos passos. Isso trouxe mais segurança para lidar com o caso.",
     name: "João Carvalho",
     date: "02/2025",
   },
   {
-    title: "Muito cuidado",
-    text: "A equipe teve paciência para ouvir minha história e explicar os próximos passos com responsabilidade.",
+    title: "Orientação responsável",
+    text: "Gostei da forma transparente como tudo foi explicado. Não prometeram resultado, mas mostraram os caminhos possíveis com seriedade.",
     name: "Ana Ferreira",
     date: "04/2025",
   },
@@ -86,12 +86,16 @@ export default function Testimonials() {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.75 }}
         >
+          <div className="mb-4 w-fit rounded-full bg-white/80 px-4 py-2 text-sm font-medium text-[#174b9a] shadow-sm">
+            Depoimentos
+          </div>
+
           <h2 className="max-w-xl text-4xl font-semibold tracking-[-0.05em] text-slate-950 md:text-6xl">
-            Depoimentos de quem confiou
+            Relatos de quem buscou orientação
           </h2>
 
           <p className="mt-4 max-w-xl text-slate-600">
-            Relatos sobre atendimento, orientação e dedicação do escritório.
+            Experiências sobre atendimento, clareza e acolhimento durante a análise do caso.
           </p>
         </motion.div>
 
@@ -111,7 +115,7 @@ export default function Testimonials() {
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.65, delay: index * 0.1 }}
                 whileHover={{ y: -10, scale: 1.015 }}
-                className="glass-card flex min-h-[360px] min-w-[360px] snap-start flex-col justify-between rounded-[32px] p-8 transition md:min-w-[520px]"
+                className="glass-card flex min-h-[380px] min-w-[360px] snap-start flex-col justify-between rounded-[32px] p-8 transition md:min-w-[520px]"
               >
                 <div>
                   <div className="mb-6 grid h-12 w-12 place-items-center rounded-full bg-[#174b9a]/10 text-[#174b9a]">
@@ -185,6 +189,11 @@ export default function Testimonials() {
             </button>
           </div>
         </div>
+
+        <p className="mx-auto mt-5 max-w-3xl text-center text-xs leading-5 text-slate-500">
+          Os relatos acima têm finalidade informativa e não representam promessa de resultado.
+          Cada caso depende de análise individual.
+        </p>
       </div>
     </section>
   );

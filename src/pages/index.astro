@@ -3,35 +3,81 @@ import '../styles/global.css';
 
 import Navbar from '../components/Navbar.jsx';
 import HeroWebild from '../components/HeroWebild.jsx';
+import HowItWorks from '../components/HowItWorks.jsx';
 import Lawyers from '../components/Lawyers.jsx';
 import Areas from '../components/Areas.jsx';
 import WhyChoose from '../components/WhyChoose.jsx';
 import Testimonials from '../components/Testimonials.jsx';
+import LocationMap from '../components/LocationMap.jsx';
+import FAQ from '../components/FAQ.jsx';
 import ContactCTA from '../components/ContactCTA.jsx';
+import Footer from '../components/Footer.jsx';
 import FloatingWhatsApp from '../components/FloatingWhatsApp.jsx';
 ---
 
 <html lang="pt-BR">
   <head>
     <meta charset="utf-8" />
+
     <title>Borges Advocacia | Direito Previdenciário</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <meta
       name="description"
       content="Borges Advocacia. Atendimento previdenciário humanizado em Goiânia para aposentadorias, BPC/LOAS, pensões, revisões e benefícios do INSS."
     />
+
+    <meta
+      name="keywords"
+      content="advogado previdenciário Goiânia, direito previdenciário, aposentadoria, BPC LOAS, pensão por morte, revisão de benefício, INSS, Borges Advocacia"
+    />
+
+    <meta name="author" content="Borges Advocacia" />
+    <meta name="theme-color" content="#174b9a" />
+
+    <link rel="canonical" href="https://www.borgesprev.com.br/" />
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content="Borges Advocacia | Direito Previdenciário" />
+    <meta
+      property="og:description"
+      content="Atendimento previdenciário humanizado em Goiânia para quem enfrenta problemas com benefícios do INSS."
+    />
+    <meta property="og:url" content="https://www.borgesprev.com.br/" />
+    <meta property="og:site_name" content="Borges Advocacia" />
+    <meta property="og:image" content="https://www.borgesprev.com.br/img/fachada.jpeg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Borges Advocacia | Direito Previdenciário" />
+    <meta
+      name="twitter:description"
+      content="Atendimento previdenciário humanizado em Goiânia para quem enfrenta problemas com benefícios do INSS."
+    />
+    <meta name="twitter:image" content="https://www.borgesprev.com.br/img/fachada.jpeg" />
   </head>
 
   <body>
     <Navbar client:load />
+
     <main>
       <HeroWebild client:load />
+      <HowItWorks client:load />
       <Lawyers client:load />
       <Areas client:load />
       <WhyChoose client:load />
       <Testimonials client:load />
+      <LocationMap client:load />
+      <FAQ client:load />
       <ContactCTA client:load />
     </main>
+
+    <Footer client:load />
     <FloatingWhatsApp client:load />
   </body>
 </html>
