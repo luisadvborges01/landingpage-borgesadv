@@ -16,7 +16,7 @@ function WhatsAppIcon() {
 export default function FloatingWhatsApp() {9
   return (
     <motion.a
-      href="https://wa.me/55629316-1779"
+      href="https://wa.me/556293161779"
       target="_blank"
       rel="noreferrer"
       initial={{ opacity: 0, scale: 0.7, y: 20 }}
