@@ -5,11 +5,13 @@ const lawyers = [
     name: "Dr. Rodrigo",
     role: "Especialista em Direito Previdenciário",
     image: "/img/adv-rodrigo.jpeg",
+    imagePosition: "object-[center_28%]",
   },
   {
     name: "Dra. Ariane",
     role: "Especialista em Direito Previdenciário",
     image: "/img/adv-ariane.jpeg",
+    imagePosition: "object-[center_24%]",
   },
 ];
 
@@ -46,7 +48,7 @@ export default function Lawyers() {
                 <img
                   src={lawyer.image}
                   alt={lawyer.name}
-                  className="h-full w-full rounded-full object-cover transition duration-700 group-hover:scale-105"
+                  className={`h-full w-full rounded-full object-cover ${lawyer.imagePosition} transition duration-700 group-hover:scale-[1.03]`}
                 />
               </div>
               <h3 className="mt-7 text-2xl font-semibold text-slate-950">

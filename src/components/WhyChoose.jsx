@@ -57,7 +57,7 @@ export default function WhyChoose() {
             <img
               src="/img/casal1.jpeg"
               alt="Atendimento Borges Advocacia"
-              className="h-[420px] w-full rounded-[26px] object-cover"
+              className="h-[420px] w-full rounded-[26px] object-cover object-[center_30%]"
             />
           </motion.div>
         </div>
