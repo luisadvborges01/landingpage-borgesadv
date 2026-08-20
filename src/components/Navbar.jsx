@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { Menu, X, MapPin, MessageCircle } from "lucide-react";
 
 const WHATSAPP_URL =
-  "https://wa.me/556293161779?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20um%20benefício%20do%20INSS.";
+  "https://wa.me/556235824711?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20um%20benefício%20do%20INSS.";
 
 const links = [
   { label: "Advogados", href: "#advogados" },
@@ -59,7 +59,7 @@ export default function Navbar() {
             </nav>
 
             <a
-              href={"https://wa.me/556293161779"}
+              href={"https://wa.me/556235824711"}
               target="_blank"
               rel="noreferrer"
               className="hidden rounded-full bg-[#174b9a] px-5 py-2 text-sm font-semibold text-white shadow-xl shadow-blue-900/20 transition hover:-translate-y-0.5 hover:bg-[#0d2f68] lg:inline-flex"
@@ -152,7 +152,7 @@ export default function Navbar() {
                 </a>
 
                 <a
-                  href={"https://wa.me/556293161779"}
+                  href={"https://wa.me/556235824711"}
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center justify-center gap-2 rounded-full bg-[#174b9a] px-5 py-4 text-sm font-bold text-white shadow-xl shadow-blue-900/20"

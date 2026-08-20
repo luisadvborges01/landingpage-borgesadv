@@ -44,7 +44,7 @@ export default function Hero() {
           className="mt-9 flex flex-col gap-4 sm:flex-row"
         >
           <a
-            href="https://wa.me/556293161779"
+            href="https://wa.me/556235824711"
             className="rounded-full bg-emerald-500 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-emerald-500/20 transition hover:-translate-y-1 hover:bg-emerald-400"
           >
             Falar no WhatsApp

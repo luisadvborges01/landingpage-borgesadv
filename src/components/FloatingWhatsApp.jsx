@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 
 const WHATSAPP_URL =
-  "https://wa.me/556293161779?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20um%20benefício%20do%20INSS.";
+  "https://wa.me/556235824711?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20um%20benefício%20do%20INSS.";
 
 function WhatsAppIcon() {
   return (
@@ -19,7 +19,7 @@ function WhatsAppIcon() {
 export default function FloatingWhatsApp() {
   return (
     <motion.a
-      href={"https://wa.me/556293161779"}
+      href={"https://wa.me/556235824711"}
       target="_blank"
       rel="noreferrer"
       initial={{ opacity: 0, scale: 0.72, y: 20 }}

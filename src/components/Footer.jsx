@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { MapPin, MessageCircle } from "lucide-react";
 
 const WHATSAPP_URL =
-  "https://wa.me/556293161779?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20um%20benefício%20do%20INSS.";
+  "https://wa.me/556235824711?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20um%20benefício%20do%20INSS.";
 
 const INSTAGRAM_URL = "https://www.instagram.com/borgesadvprevidencia";
 
@@ -93,7 +93,7 @@ export default function Footer() {
 
               <div className="mt-4 grid gap-3 text-sm text-slate-600">
                 <a
-                  href={"https://wa.me/556293161779"}
+                  href={"https://wa.me/556235824711"}
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center gap-2 hover:text-[#174b9a]"
