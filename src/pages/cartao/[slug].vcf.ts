@@ -22,7 +22,7 @@ export const GET: APIRoute = ({ params }) => {
   const vcard = [
     "BEGIN:VCARD",
     "VERSION:3.0",
-    `N:Rodrigo;Dr.;;;`,
+    `N:Rodrigo;;;;`,
     `FN:${escapeVCard(card.displayName)}`,
     `ORG:${escapeVCard(card.company)}`,
     `TITLE:${escapeVCard("Advogado — Direito Previdenciário")}`,
@@ -31,14 +31,15 @@ export const GET: APIRoute = ({ params }) => {
     `URL:${card.links.page}`,
     `ADR;TYPE=WORK:;;${escapeVCard(card.address.full)};;;;Brasil`,
     "END:VCARD",
-    "",
   ].join("\r\n");
 
-  return new Response(`\uFEFF${vcard}`, {
+  const filename = card.displayName.replace(/[^A-Za-z0-9]+/g, "-").replace(/^-|-$/g, "") + ".vcf";
+
+  return new Response(vcard, {
     headers: {
       "Content-Type": "text/vcard; charset=utf-8",
-      "Content-Disposition": `attachment; filename=\"${card.slug}-borges-advocacia.vcf\"`,
-      "Cache-Control": "public, max-age=3600",
+      "Content-Disposition": 'inline; filename="' + filename + '"',
+      "Cache-Control": "no-cache",
       "X-Content-Type-Options": "nosniff",
     },
   });
