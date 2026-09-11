@@ -18,6 +18,7 @@ export type ProfessionalCard = {
     page: string;
     whatsapp: string;
     maps: string;
+    instagram: string;
   };
   image: {
     src: string;
@@ -63,6 +64,7 @@ export const professionalCards: Record<string, ProfessionalCard> = {
       page: "https://borgesprev.com.br/cartao/rodrigo",
       whatsapp: "https://wa.me/5562981684561",
       maps: "https://maps.app.goo.gl/bJycvcG9wSZE4ZCt5",
+      instagram: "https://www.instagram.com/dr.rodrigooborgess/",
     },
     image: {
       src: "/img/adv-rodrigo.jpeg",
@@ -86,6 +88,7 @@ export const officeContact = {
   address: professionalCards.rodrigo.address,
   links: {
     whatsapp: "https://wa.me/556235824711",
+    instagram: "https://www.instagram.com/borgesadvprevidencia/",
     vcard: "/cartao/borges-advocacia.vcf",
   },
 } as const;
