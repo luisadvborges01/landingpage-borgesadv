@@ -30,12 +30,13 @@ export const GET: APIRoute = ({ params }) => {
     : card
       ? {
           name: card.displayName,
-          structuredName: "Rodrigo",
+          structuredName: card.structuredName,
           company: card.company,
           phone: card.phoneE164,
           email: card.email,
           url: card.links.page,
-          title: "Advogado \u2014 Direito Previdenci\u00e1rio",
+          title: card.vcardTitle,
+          note: card.vcardNote,
           address: card.address.full,
         }
       : undefined;
@@ -50,6 +51,7 @@ export const GET: APIRoute = ({ params }) => {
     "ORG:" + escapeVCard(contact.company),
   ];
   if ("title" in contact) lines.push("TITLE:" + escapeVCard(contact.title));
+  if ("note" in contact && contact.note) lines.push("NOTE:" + escapeVCard(contact.note));
   lines.push("TEL;TYPE=CELL,VOICE:" + contact.phone);
   if ("email" in contact) lines.push("EMAIL;TYPE=INTERNET,WORK:" + contact.email);
   if ("url" in contact) lines.push("URL:" + contact.url);
