@@ -1,0 +1,236 @@
+---
+import type { GetStaticPaths } from "astro";
+import {
+  getProfessionalCard,
+  professionalCardSlugs,
+} from "../../data/professionalCards";
+import { createGoogleWalletSaveLink } from "../../lib/googleWallet";
+import "../../styles/professional-card.css";
+
+export const getStaticPaths = (() =>
+  professionalCardSlugs.map((slug) => ({ params: { slug } }))) satisfies GetStaticPaths;
+
+const card = getProfessionalCard(Astro.params.slug);
+if (!card) return Astro.redirect("/404");
+
+const wallet = createGoogleWalletSaveLink(card);
+const vcardUrl = `/cartao/${card.slug}.vcf`;
+const firstAreaRow = card.areas.slice(0, 6);
+const secondAreaRow = card.areas.slice(6);
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="googlebot" content="noindex, nofollow" />
+    <meta name="theme-color" content="#071a35" />
+    <meta name="color-scheme" content="light" />
+    <title>{card.displayName} | Borges Advocacia</title>
+    <meta
+      name="description"
+      content={`${card.displayName}, ${card.role}. Contato profissional da Borges Advocacia.`}
+    />
+    <link rel="canonical" href={card.links.page} />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+  </head>
+  <body>
+    <main class="card-page">
+      <section class="profile-hero" aria-labelledby="professional-name">
+        <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+        <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+
+        <div class="hero-inner">
+          <a class="brand" href={card.links.page} aria-label="Borges Advocacia">
+            <img src="/img/logo.png" alt="Borges Advocacia" width="176" height="56" />
+          </a>
+
+          <div class="portrait-frame">
+            <div class="portrait-ring" aria-hidden="true"></div>
+            <img
+              src={card.image.src}
+              alt={card.image.alt}
+              width="420"
+              height="520"
+              fetchpriority="high"
+              style={`object-position: ${card.image.position}`}
+            />
+          </div>
+
+          <div class="identity">
+            <p class="eyebrow">Borges Advocacia</p>
+            <h1 id="professional-name">{card.displayName}</h1>
+            <p class="role">{card.role}</p>
+            <p class="oab">{card.oab}</p>
+          </div>
+
+          <a
+            class="primary-action"
+            href={vcardUrl}
+            download
+            data-event="save_contact"
+          >
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 19h14" /></svg>
+            Salvar contato
+          </a>
+
+          <div class="quick-actions" aria-label="Ações de contato">
+            <a
+              href={card.links.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-event="whatsapp_click"
+            >
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 11.5a8.3 8.3 0 0 1-8.5 8.2 8.7 8.7 0 0 1-3.7-.8L4 20l1.2-3.5a8 8 0 0 1-1.4-4.6A8.3 8.3 0 0 1 12.2 4 8.1 8.1 0 0 1 20 11.5Z" /><path d="M9 8.5c.4 2 2.3 4 4.5 5l1.5-1.2 2 .9c-.4 1.4-1.5 2.2-3 2.1-3.2-.4-6.3-3.3-6.8-6.2 0-1.3.7-2.2 1.8-2.6l1 2Z" /></svg>
+              <span>WhatsApp</span>
+            </a>
+            <a href={`tel:${card.phoneE164}`} data-event="phone_click">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 4 4.7 6.3c-.8.8.1 4.2 3.6 7.7s6.9 4.4 7.7 3.6l2.3-2.3-4-2-1.4 1.4c-1.8-.8-3.8-2.8-4.6-4.6l1.4-1.4L7 4Z" /></svg>
+              <span>Ligar</span>
+            </a>
+            <a href={`mailto:${card.email}`} data-event="email_click">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="2" /><path d="m4.5 7 7.5 6 7.5-6" /></svg>
+              <span>E-mail</span>
+            </a>
+          </div>
+
+          {wallet && (
+            <div class="wallet-action" data-event="google_wallet_click">
+              <g:savetoandroidpay jwt={wallet.jwt} theme="dark" size="large"></g:savetoandroidpay>
+            </div>
+          )}
+        </div>
+      </section>
+
+      <div class="content-shell">
+        <section class="bio-section reveal" aria-labelledby="about-title">
+          <p class="section-kicker">Atuação profissional</p>
+          <h2 id="about-title">Orientação jurídica com atenção individual.</h2>
+          <p>{card.bio}</p>
+        </section>
+
+        <section class="areas-section reveal" aria-labelledby="areas-title">
+          <div class="section-heading">
+            <p class="section-kicker">Direito Previdenciário</p>
+            <h2 id="areas-title">Como posso ajudar</h2>
+          </div>
+
+          <div class="marquee" aria-label={firstAreaRow.join(", ")}>
+            <div class="marquee-track marquee-forward">
+              <div class="marquee-group">
+                {firstAreaRow.map((area) => <span>{area}</span>)}
+              </div>
+              <div class="marquee-group" aria-hidden="true">
+                {firstAreaRow.map((area) => <span>{area}</span>)}
+              </div>
+            </div>
+          </div>
+          <div class="marquee" aria-label={secondAreaRow.join(", ")}>
+            <div class="marquee-track marquee-reverse">
+              <div class="marquee-group">
+                {secondAreaRow.map((area) => <span>{area}</span>)}
+              </div>
+              <div class="marquee-group" aria-hidden="true">
+                {secondAreaRow.map((area) => <span>{area}</span>)}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="contact-section reveal" aria-labelledby="contact-title">
+          <div class="section-heading">
+            <p class="section-kicker">Contato direto</p>
+            <h2 id="contact-title">Vamos conversar</h2>
+          </div>
+          <div class="contact-list">
+            <a
+              href={card.links.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-event="whatsapp_click"
+            >
+              <span class="contact-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 11.5a8.3 8.3 0 0 1-8.5 8.2 8.7 8.7 0 0 1-3.7-.8L4 20l1.2-3.5a8 8 0 0 1-1.4-4.6A8.3 8.3 0 0 1 12.2 4 8.1 8.1 0 0 1 20 11.5Z" /></svg></span>
+              <span><small>WhatsApp</small><strong>{card.phoneDisplay}</strong></span>
+              <span class="arrow" aria-hidden="true">↗</span>
+            </a>
+            <a href={`tel:${card.phoneE164}`} data-event="phone_click">
+              <span class="contact-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 4 4.7 6.3c-.8.8.1 4.2 3.6 7.7s6.9 4.4 7.7 3.6l2.3-2.3-4-2-1.4 1.4c-1.8-.8-3.8-2.8-4.6-4.6l1.4-1.4L7 4Z" /></svg></span>
+              <span><small>Telefone</small><strong>{card.phoneDisplay}</strong></span>
+              <span class="arrow" aria-hidden="true">↗</span>
+            </a>
+            <a href={`mailto:${card.email}`} data-event="email_click">
+              <span class="contact-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="2" /><path d="m4.5 7 7.5 6 7.5-6" /></svg></span>
+              <span><small>E-mail</small><strong>{card.email}</strong></span>
+              <span class="arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="location-section reveal" aria-labelledby="location-title">
+          <div class="location-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="2.5" /></svg>
+          </div>
+          <div>
+            <p class="section-kicker">Endereço profissional</p>
+            <h2 id="location-title">{card.company}</h2>
+            <address>
+              {card.address.line1}<br />
+              {card.address.line2}
+            </address>
+          </div>
+          <a
+            class="maps-action"
+            href={card.links.maps}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-event="maps_click"
+          >
+            Abrir no Google Maps
+            <span aria-hidden="true">↗</span>
+          </a>
+        </section>
+
+        <footer class="card-footer">
+          <img src="/img/logo.png" alt="" width="118" height="38" loading="lazy" />
+          <p>Atendimento jurídico responsável e individualizado.</p>
+          <small>© {new Date().getFullYear()} Borges Advocacia</small>
+        </footer>
+      </div>
+    </main>
+
+    <nav class="mobile-dock" aria-label="Ações principais">
+      <a
+        href={card.links.whatsapp}
+        target="_blank"
+        rel="noopener noreferrer"
+        data-event="whatsapp_click"
+      >
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 11.5a8.3 8.3 0 0 1-8.5 8.2 8.7 8.7 0 0 1-3.7-.8L4 20l1.2-3.5a8 8 0 0 1-1.4-4.6A8.3 8.3 0 0 1 12.2 4 8.1 8.1 0 0 1 20 11.5Z" /></svg>
+        WhatsApp
+      </a>
+      <a class="dock-primary" href={vcardUrl} download data-event="save_contact">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 19h14" /></svg>
+        Salvar contato
+      </a>
+    </nav>
+
+    <script is:inline>
+      (() => {
+        const track = (name) => {
+          if (typeof window.gtag === "function") {
+            window.gtag("event", name, { card_slug: "rodrigo" });
+          }
+        };
+        track("card_view");
+        document.addEventListener("click", (event) => {
+          const target = event.target.closest("[data-event]");
+          if (target) track(target.dataset.event);
+        });
+      })();
+    </script>
+    {wallet && <script is:inline async src="https://apis.google.com/js/platform.js"></script>}
+  </body>
+</html>
