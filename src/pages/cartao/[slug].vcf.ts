@@ -1,11 +1,12 @@
 import type { APIRoute, GetStaticPaths } from "astro";
 import {
   getProfessionalCard,
+  officeContact,
   professionalCardSlugs,
 } from "../../data/professionalCards";
 
 export const getStaticPaths = (() =>
-  professionalCardSlugs.map((slug) => ({ params: { slug } }))) satisfies GetStaticPaths;
+  [...professionalCardSlugs, officeContact.slug].map((slug) => ({ params: { slug } }))) satisfies GetStaticPaths;
 
 function escapeVCard(value: string) {
   return value
@@ -17,23 +18,45 @@ function escapeVCard(value: string) {
 
 export const GET: APIRoute = ({ params }) => {
   const card = getProfessionalCard(params.slug);
-  if (!card) return new Response("Not found", { status: 404 });
+  const isOffice = params.slug === officeContact.slug;
+  const contact = isOffice
+    ? {
+        name: officeContact.displayName,
+        structuredName: officeContact.displayName,
+        company: officeContact.company,
+        phone: officeContact.phoneE164,
+        address: officeContact.address.full,
+      }
+    : card
+      ? {
+          name: card.displayName,
+          structuredName: "Rodrigo",
+          company: card.company,
+          phone: card.phoneE164,
+          email: card.email,
+          url: card.links.page,
+          title: "Advogado \u2014 Direito Previdenci\u00e1rio",
+          address: card.address.full,
+        }
+      : undefined;
 
-  const vcard = [
+  if (!contact) return new Response("Not found", { status: 404 });
+
+  const lines = [
     "BEGIN:VCARD",
     "VERSION:3.0",
-    `N:Rodrigo;;;;`,
-    `FN:${escapeVCard(card.displayName)}`,
-    `ORG:${escapeVCard(card.company)}`,
-    `TITLE:${escapeVCard("Advogado — Direito Previdenciário")}`,
-    `TEL;TYPE=CELL,VOICE:${card.phoneE164}`,
-    `EMAIL;TYPE=INTERNET,WORK:${card.email}`,
-    `URL:${card.links.page}`,
-    `ADR;TYPE=WORK:;;${escapeVCard(card.address.full)};;;;Brasil`,
-    "END:VCARD",
-  ].join("\r\n");
+    "N:" + escapeVCard(contact.structuredName) + ";;;;",
+    "FN:" + escapeVCard(contact.name),
+    "ORG:" + escapeVCard(contact.company),
+  ];
+  if ("title" in contact) lines.push("TITLE:" + escapeVCard(contact.title));
+  lines.push("TEL;TYPE=CELL,VOICE:" + contact.phone);
+  if ("email" in contact) lines.push("EMAIL;TYPE=INTERNET,WORK:" + contact.email);
+  if ("url" in contact) lines.push("URL:" + contact.url);
+  lines.push("ADR;TYPE=WORK:;;" + escapeVCard(contact.address) + ";;;;Brasil", "END:VCARD");
 
-  const filename = card.displayName.replace(/[^A-Za-z0-9]+/g, "-").replace(/^-|-$/g, "") + ".vcf";
+  const vcard = lines.join("\r\n");
+  const filename = contact.name.replace(/[^A-Za-z0-9]+/g, "-").replace(/^-|-$/g, "") + ".vcf";
 
   return new Response(vcard, {
     headers: {

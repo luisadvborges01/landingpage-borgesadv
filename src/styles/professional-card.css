@@ -65,7 +65,10 @@ svg { width: 1.25rem; height: 1.25rem; fill: none; stroke: currentColor; stroke-
 .marquee-forward { animation: marquee 32s linear infinite; }
 .marquee-reverse { animation: marquee-reverse 36s linear infinite; }
 .contact-section { background: var(--surface); }
-.contact-list { margin-top: 1.55rem; border-top: 1px solid var(--line); }
+.contact-groups { margin-top: 1.55rem; }
+.contact-group + .contact-group { margin-top: 2rem; }
+.contact-group-title { margin: 0; color: #64707d; font-size: .72rem; font-weight: 750; letter-spacing: .09em; text-transform: uppercase; }
+.contact-list { margin-top: .65rem; border-top: 1px solid var(--line); }
 .contact-list a { display: grid; min-height: 5.1rem; grid-template-columns: 2.65rem minmax(0, 1fr) auto; align-items: center; gap: .85rem; border-bottom: 1px solid var(--line); transition: color .2s ease, padding .2s ease; }
 .contact-icon { display: grid; width: 2.65rem; height: 2.65rem; place-items: center; border-radius: .78rem; color: var(--navy-800); background: #edf3f9; }
 .contact-list small, .contact-list strong { display: block; min-width: 0; }

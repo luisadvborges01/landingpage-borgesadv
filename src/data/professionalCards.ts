@@ -29,9 +29,6 @@ export type ProfessionalCard = {
   };
 };
 
-const whatsappMessage =
-  "Olá, Dr. Rodrigo. Acessei seu cartão digital da Borges Advocacia e gostaria de conversar sobre uma questão previdenciária.";
-
 export const professionalCards: Record<string, ProfessionalCard> = {
   rodrigo: {
     slug: "rodrigo",
@@ -64,7 +61,7 @@ export const professionalCards: Record<string, ProfessionalCard> = {
     },
     links: {
       page: "https://borgesprev.com.br/cartao/rodrigo",
-      whatsapp: `https://wa.me/5562981684561?text=${encodeURIComponent(whatsappMessage)}`,
+      whatsapp: "https://wa.me/5562981684561",
       maps: "https://maps.app.goo.gl/bJycvcG9wSZE4ZCt5",
     },
     image: {
@@ -79,6 +76,19 @@ export const professionalCards: Record<string, ProfessionalCard> = {
 };
 
 export const professionalCardSlugs = Object.keys(professionalCards);
+
+export const officeContact = {
+  slug: "borges-advocacia",
+  displayName: "Borges Advocacia",
+  company: "Borges Advocacia",
+  phoneDisplay: "+55 62 3582-4711",
+  phoneE164: "+556235824711",
+  address: professionalCards.rodrigo.address,
+  links: {
+    whatsapp: "https://wa.me/556235824711",
+    vcard: "/cartao/borges-advocacia.vcf",
+  },
+} as const;
 
 export function getProfessionalCard(slug: string | undefined) {
   return slug && Object.prototype.hasOwnProperty.call(professionalCards, slug)
