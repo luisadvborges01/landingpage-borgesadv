@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://borgesprev.com.br/sitemap.xml

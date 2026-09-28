@@ -4,30 +4,45 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    question: "O atendimento pode começar pelo WhatsApp?",
-    answer:
-      "Sim. O primeiro contato pode ser feito pelo WhatsApp para que nossa equipe entenda sua situação inicial e oriente sobre os próximos passos.",
+    "question": "Como funciona o primeiro atendimento?",
+    "answer": "Você conta brevemente sua situação. A equipe informa os dados e documentos necessários para a análise individual e orienta sobre os próximos passos."
   },
   {
-    question: "Quais casos previdenciários o escritório atende?",
-    answer:
-      "Atendemos demandas relacionadas a aposentadorias, BPC/LOAS, pensão por morte, revisões, benefícios negados, cessados, suspensos ou parados na análise do INSS.",
+    "question": "Posso iniciar pelo WhatsApp?",
+    "answer": "Sim. Você pode iniciar o contato pelo WhatsApp do escritório e explicar sua dúvida."
   },
   {
-    question: "Preciso levar documentos logo no primeiro contato?",
-    answer:
-      "No primeiro contato, você pode explicar brevemente o caso. Depois, a equipe informa quais documentos são importantes para análise, como documentos pessoais, cartas do INSS, laudos, CNIS e comprovantes.",
+    "question": "Posso buscar orientação para um familiar?",
+    "answer": "Sim. Conte brevemente a situação do seu familiar. A equipe orientará sobre as informações necessárias e a participação da pessoa interessada."
   },
   {
-    question: "O atendimento é presencial?",
-    answer:
-      "Sim. O escritório realiza atendimento presencial em Goiânia, preferencialmente mediante agendamento. Também é possível iniciar o atendimento de forma online.",
+    "question": "Meu benefício foi negado. O que devo separar?",
+    "answer": "Se tiver, separe a comunicação de negativa do INSS, seus documentos pessoais e o CNIS. A equipe indicará outros documentos conforme o caso."
   },
   {
-    question: "Vocês garantem que o benefício será concedido?",
-    answer:
-      "Não. Cada caso depende de análise individual, documentos, histórico previdenciário e entendimento do INSS ou do Judiciário. O escritório atua com orientação técnica e responsável, sem promessa de resultado.",
+    "question": "Preciso enviar documentos no primeiro contato?",
+    "answer": "Você pode começar explicando sua situação. Aguarde a orientação da equipe sobre quais documentos enviar."
   },
+  {
+    "question": "O escritório atende aposentadoria?",
+    "answer": "Sim. O escritório atua com aposentadorias e planejamento previdenciário, conforme a situação e o histórico de cada pessoa."
+  },
+  {
+    "question": "O escritório atende BPC/LOAS?",
+    "answer": "Sim. A equipe analisa questões de BPC/LOAS para idosos e pessoas com deficiência. O atendimento não significa que o benefício será concedido."
+  },
+  {
+    "question": "O escritório atende benefícios por incapacidade?",
+    "answer": "Sim. Atua com auxílio por incapacidade temporária e aposentadoria por incapacidade permanente, mediante análise individual."
+  },
+  {
+    "question": "O atendimento é presencial?",
+    "answer": "Sim, em Goiânia, preferencialmente mediante agendamento. O primeiro contato também pode ser feito pelo WhatsApp."
+  },
+  {
+    "question": "Existe garantia de resultado?",
+    "answer": "Não. Cada caso depende dos documentos, da análise individual e da decisão do INSS ou do Judiciário. Não há promessa de resultado."
+  }
 ];
 
 export default function FAQ() {
@@ -52,8 +67,7 @@ export default function FAQ() {
             </h2>
 
             <p className="mt-5 max-w-xl text-slate-600">
-              Algumas respostas para quem está enfrentando problema com benefício do INSS
-              e ainda não sabe por onde começar.
+              Respostas sobre o atendimento e as áreas de atuação do escritório.
             </p>
           </motion.div>
 
@@ -74,6 +88,8 @@ export default function FAQ() {
                 >
                   <button
                     type="button"
+                    aria-expanded={isOpen}
+                    aria-controls={`faq-answer-${index}`}
                     onClick={() => setOpenIndex(isOpen ? -1 : index)}
                     className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
                   >
@@ -93,6 +109,7 @@ export default function FAQ() {
                   <AnimatePresence initial={false}>
                     {isOpen && (
                       <motion.div
+                        id={`faq-answer-${index}`}
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}

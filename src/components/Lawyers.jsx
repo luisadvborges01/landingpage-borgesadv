@@ -1,14 +1,17 @@
+import { professionalCards } from "../data/professionalCards";
 import { motion } from "motion/react";
 
 const lawyers = [
   {
-    name: "Dr. Rodrigo",
+    name: professionalCards.rodrigo.displayName,
+    oab: professionalCards.rodrigo.oab,
     role: "Especialista em Direito Previdenciário",
     image: "/img/adv-rodrigo.jpeg",
     imagePosition: "object-[center_28%]",
   },
   {
-    name: "Dra. Ariane",
+    name: professionalCards.ariane.displayName,
+    oab: professionalCards.ariane.oab,
     role: "Especialista em Direito Previdenciário",
     image: "/img/adv-ariane.jpeg",
     imagePosition: "object-[center_24%]",
@@ -54,6 +57,7 @@ export default function Lawyers() {
               <h3 className="mt-7 text-2xl font-semibold text-slate-950">
                 {lawyer.name}
               </h3>
+              <p className="mt-2 text-sm font-medium text-[#174b9a]">{lawyer.oab}</p>
               <p className="mt-2 text-sm text-slate-600">{lawyer.role}</p>
             </motion.article>
           ))}

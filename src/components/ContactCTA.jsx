@@ -1,8 +1,7 @@
 import { motion } from "motion/react";
 import { ArrowUpRight, MessageCircle } from "lucide-react";
 
-const WHATSAPP_URL =
-  "https://wa.me/556235824711?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20um%20benefício%20do%20INSS.";
+import { WHATSAPP_URL } from "../data/homeContact";
 
 export default function ContactCTA() {
   return (
@@ -24,7 +23,7 @@ export default function ContactCTA() {
           </div>
 
           <h2 className="mx-auto max-w-2xl text-4xl font-semibold tracking-[-0.05em] text-slate-950 md:text-6xl">
-            Está com problema no INSS?
+            Precisa de orientação previdenciária?
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-slate-600">
@@ -34,12 +33,12 @@ export default function ContactCTA() {
 
           <div className="mx-auto mt-8 flex max-w-xl flex-col gap-3 sm:flex-row">
             <a
-              href={"https://wa.me/556235824711"}
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noreferrer"
               className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-[#174b9a] px-7 py-4 text-sm font-bold text-white shadow-2xl shadow-blue-900/20 transition hover:-translate-y-1 hover:bg-[#0d2f68]"
             >
-              Chamar no WhatsApp
+              Falar pelo WhatsApp
               <ArrowUpRight size={18} />
             </a>
 

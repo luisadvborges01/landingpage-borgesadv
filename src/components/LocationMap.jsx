@@ -1,3 +1,4 @@
+import { officeContact, WHATSAPP_URL } from "../data/homeContact";
 import { motion } from "motion/react";
 import { MapPin, Navigation, Clock, CalendarCheck } from "lucide-react";
 
@@ -47,12 +48,16 @@ export default function LocationMap() {
             </h3>
 
             <p className="mt-4 leading-7 text-slate-600">
-              Escritório especializado em Direito Previdenciário, com atendimento
+              Escritório com atuação em Direito Previdenciário, com atendimento
               humanizado para aposentadorias, BPC/LOAS, pensões, revisões e demais
               questões envolvendo benefícios do INSS.
             </p>
 
             <div className="mt-7 space-y-4">
+              <p className="text-sm leading-6 text-slate-600">
+                <a className="block underline" href={WHATSAPP_URL} target="_blank" rel="noreferrer">WhatsApp: {officeContact.phoneDisplay}</a>
+                <a className="block underline" href={`tel:${officeContact.phoneE164}`}>Telefone: {officeContact.phoneDisplay}</a>
+              </p>
               <div className="flex gap-3">
                 <div className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[#174b9a]/10 text-[#174b9a]">
                   <Navigation size={18} />
@@ -61,7 +66,7 @@ export default function LocationMap() {
                 <div>
                   <p className="font-semibold text-slate-950">Endereço</p>
                   <p className="mt-1 text-sm leading-6 text-slate-600">
-                    BORGES ADVOCACIA PQ. AMAZÔNIA, Goiânia - GO
+                    {officeContact.address.full}
                   </p>
                 </div>
               </div>
@@ -74,7 +79,7 @@ export default function LocationMap() {
                 <div>
                   <p className="font-semibold text-slate-950">Horário de atendimento</p>
                   <p className="mt-1 text-sm leading-6 text-slate-600">
-                    Segunda a sexta, em horário comercial.
+                    Segunda a sexta. Consulte os horários disponíveis pelo WhatsApp.
                   </p>
                 </div>
               </div>

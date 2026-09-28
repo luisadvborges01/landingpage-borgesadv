@@ -1,7 +1,6 @@
 import { motion } from "motion/react";
 
-const WHATSAPP_URL =
-  "https://wa.me/556235824711?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20um%20benefício%20do%20INSS.";
+import { WHATSAPP_URL } from "../data/homeContact";
 
 function WhatsAppIcon() {
   return (
@@ -19,7 +18,7 @@ function WhatsAppIcon() {
 export default function FloatingWhatsApp() {
   return (
     <motion.a
-      href={"https://wa.me/556235824711"}
+      href={WHATSAPP_URL}
       target="_blank"
       rel="noreferrer"
       initial={{ opacity: 0, scale: 0.72, y: 20 }}
@@ -28,7 +27,7 @@ export default function FloatingWhatsApp() {
       whileHover={{ y: -7, scale: 1.08 }}
       whileTap={{ scale: 0.94 }}
       className="fixed bottom-6 right-6 z-50 grid h-16 w-16 place-items-center rounded-full bg-[#25D366] text-white shadow-2xl shadow-emerald-900/35"
-      aria-label="Falar no WhatsApp"
+      aria-label="Falar pelo WhatsApp"
     >
       <motion.span
         animate={{

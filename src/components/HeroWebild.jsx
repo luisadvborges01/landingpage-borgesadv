@@ -1,8 +1,7 @@
 import { motion } from "motion/react";
 import { ArrowUpRight, ShieldCheck, FileText, MessageCircle } from "lucide-react";
 
-const WHATSAPP_URL =
-  "https://wa.me/556235824711?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20um%20benefício%20do%20INSS.";
+import { WHATSAPP_URL } from "../data/homeContact";
 
 const item = {
   hidden: { opacity: 0, y: 26 },
@@ -24,15 +23,15 @@ export default function HeroWebild() {
               transition={{ duration: 0.65 }}
               className="mb-5 inline-flex rounded-full bg-white/80 px-4 py-2 text-sm font-medium text-[#174b9a] shadow-sm"
             >
-              Advocacia Previdenciária em Goiânia
+              Borges Advocacia
             </motion.div>
 
             <motion.h1
               variants={item}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="max-w-3xl text-5xl font-semibold tracking-[-0.055em] text-slate-950 md:text-6xl lg:text-7xl"
+              className="max-w-3xl text-4xl font-semibold sm:text-5xl tracking-[-0.055em] text-slate-950 md:text-6xl lg:text-7xl"
             >
-              Teve benefício negado, cortado ou está com problema no INSS?
+              Advocacia Previdenciária em Goiânia
             </motion.h1>
 
             <motion.p
@@ -40,9 +39,9 @@ export default function HeroWebild() {
               transition={{ duration: 0.75, ease: "easeOut" }}
               className="mt-6 max-w-2xl text-base leading-7 text-slate-600 md:text-lg"
             >
-              A Borges Advocacia analisa seu caso previdenciário com atendimento
-              humanizado, orientação segura e acompanhamento responsável para indicar
-              os próximos passos.
+              Atuamos em Direito Previdenciário, com orientação em aposentadorias,
+              BPC/LOAS, pensões e benefícios do INSS. Inicie o contato pelo WhatsApp
+              e conte brevemente sua situação.
             </motion.p>
 
             <motion.div
@@ -56,15 +55,15 @@ export default function HeroWebild() {
                 rel="noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-[#174b9a] px-7 py-4 text-sm font-bold text-white shadow-2xl shadow-blue-900/20 transition hover:-translate-y-1 hover:bg-[#0d2f68]"
               >
-                Falar no WhatsApp
+                Falar pelo WhatsApp
                 <ArrowUpRight size={18} />
               </a>
 
               <a
-                href="#como-funciona"
+                href="#areas"
                 className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white/80 px-7 py-4 text-sm font-bold text-slate-900 transition hover:-translate-y-1 hover:bg-white"
               >
-                Entender atendimento
+                Ver áreas de atuação
               </a>
             </motion.div>
 
@@ -79,7 +78,7 @@ export default function HeroWebild() {
                     <MessageCircle size={18} />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-slate-950">Primeiro contato simples</h3>
+                    <p className="font-semibold text-slate-950">Primeiro contato simples</p>
                     <p className="mt-1 text-sm text-slate-600">
                       Você chama no WhatsApp e conta brevemente sua situação.
                     </p>
@@ -91,7 +90,7 @@ export default function HeroWebild() {
                     <FileText size={18} />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-slate-950">Análise individual</h3>
+                    <p className="font-semibold text-slate-950">Análise individual</p>
                     <p className="mt-1 text-sm text-slate-600">
                       Cada caso é observado conforme seus documentos e histórico.
                     </p>
@@ -103,7 +102,7 @@ export default function HeroWebild() {
                     <ShieldCheck size={18} />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-slate-950">Orientação responsável</h3>
+                    <p className="font-semibold text-slate-950">Orientação responsável</p>
                     <p className="mt-1 text-sm text-slate-600">
                       Atendimento técnico e transparente.
                     </p>
@@ -126,17 +125,17 @@ export default function HeroWebild() {
               <img
                 src="/img/fachada.jpeg"
                 alt="Fachada da Borges Advocacia"
-                className="h-[500px] w-full rounded-[26px] object-cover"
+                className="hero-facade h-[340px] w-full rounded-[26px] object-cover md:h-[500px]"
               />
             </div>
 
             <motion.div
               animate={{ y: [0, -12, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="glass-card absolute -bottom-8 left-6 rounded-[24px] p-5"
+              className="glass-card absolute -bottom-8 left-3 right-3 sm:left-6 sm:right-auto rounded-[24px] p-5"
             >
               <p className="text-sm font-medium text-slate-500">Atuação focada em</p>
-              <p className="mt-1 text-2xl font-bold text-slate-950">Direito Previdenciário</p>
+              <p className="mt-1 text-xl font-bold sm:text-2xl text-slate-950">Direito Previdenciário</p>
             </motion.div>
           </motion.div>
         </div>

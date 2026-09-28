@@ -1,10 +1,9 @@
 import { motion } from "motion/react";
 import { MapPin, MessageCircle } from "lucide-react";
 
-const WHATSAPP_URL =
-  "https://wa.me/556235824711?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20um%20benefício%20do%20INSS.";
+import { WHATSAPP_URL, officeContact } from "../data/homeContact";
 
-const INSTAGRAM_URL = "https://www.instagram.com/borgesadvprevidencia";
+const INSTAGRAM_URL = officeContact.links.instagram;
 
 function InstagramIcon() {
   return (
@@ -29,7 +28,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="pb-8 pt-10">
+    <footer className="pb-28 pt-10">
       <div className="page-section">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -93,13 +92,13 @@ export default function Footer() {
 
               <div className="mt-4 grid gap-3 text-sm text-slate-600">
                 <a
-                  href={"https://wa.me/556235824711"}
+                  href={WHATSAPP_URL}
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center gap-2 hover:text-[#174b9a]"
                 >
                   <MessageCircle size={17} />
-                  WhatsApp
+                  WhatsApp: {officeContact.phoneDisplay}
                 </a>
 
                 <a
@@ -107,11 +106,11 @@ export default function Footer() {
                   className="flex items-center gap-2 hover:text-[#174b9a]"
                 >
                   <MapPin size={17} />
-                  Goiânia - GO
+                  {officeContact.address.full}
                 </a>
 
                 <a
-                  href={"https://www.instagram.com/borgesadvprevidencia"}
+                  href={INSTAGRAM_URL}
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center gap-2 hover:text-[#174b9a]"
@@ -123,6 +122,15 @@ export default function Footer() {
             </div>
           </div>
 
+          <section aria-labelledby="canais-oficiais" className="mt-8 border-t border-slate-200/80 pt-6 text-sm text-slate-600">
+            <h2 id="canais-oficiais" className="font-semibold text-slate-950">Canais oficiais</h2>
+            <p className="mt-2">Para sua segurança, confirme sempre se está falando pelos canais oficiais da Borges Advocacia.</p>
+            <div className="mt-3 flex flex-col gap-3 break-words">
+              <a className="underline" href={WHATSAPP_URL} target="_blank" rel="noreferrer">WhatsApp: {officeContact.phoneDisplay}</a>
+              <a className="underline" href={`tel:${officeContact.phoneE164}`}>Telefone: {officeContact.phoneDisplay}</a>
+              <a className="underline" href={INSTAGRAM_URL} target="_blank" rel="noreferrer">Instagram: @borgesadvprevidencia</a>
+            </div>
+          </section>
           <div className="mt-8 border-t border-slate-200/80 pt-6">
             <p className="text-xs leading-5 text-slate-500">
               As informações deste site possuem caráter informativo e não substituem consulta

@@ -3,22 +3,22 @@ import { MessageCircle, ClipboardCheck, FileSearch, Scale } from "lucide-react";
 
 const steps = [
   {
-    title: "Você chama no WhatsApp",
-    text: "O primeiro contato é simples: você informa o que aconteceu com seu benefício ou dúvida previdenciária.",
+    title: "Primeiro contato",
+    text: "Você conta brevemente sua situação ou dúvida previdenciária.",
     icon: MessageCircle,
   },
   {
-    title: "Entendemos sua situação",
-    text: "Nossa equipe organiza as informações iniciais e identifica quais documentos podem ser necessários.",
+    title: "Informações iniciais",
+    text: "A equipe informa quais dados ou documentos são necessários para a análise.",
     icon: ClipboardCheck,
   },
   {
-    title: "Analisamos o caso",
+    title: "Análise",
     text: "O caso é avaliado de forma individual, considerando documentos, histórico e situação junto ao INSS.",
     icon: FileSearch,
   },
   {
-    title: "Orientamos os próximos passos",
+    title: "Orientação",
     text: "Você recebe orientação clara sobre os caminhos possíveis, sempre sem promessa de resultado.",
     icon: Scale,
   },

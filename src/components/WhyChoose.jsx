@@ -2,16 +2,16 @@ import { motion } from "motion/react";
 
 const reasons = [
   {
-    title: "Foco Total no INSS",
+    title: "Atuação em Direito Previdenciário",
     text: "Atuação direcionada para demandas previdenciárias e assistenciais.",
   },
   {
-    title: "Atendimento Presencial",
+    title: "Atendimento presencial em Goiânia",
     text: "Escritório em Goiânia para ouvir sua história de perto.",
   },
   {
-    title: "Transparência",
-    text: "Informações claras sobre o andamento e as possibilidades do caso.",
+    title: "Contato pelo WhatsApp",
+    text: "O primeiro contato pode ser iniciado pelo WhatsApp do escritório.",
   },
 ];
 
@@ -27,12 +27,12 @@ export default function WhyChoose() {
             transition={{ duration: 0.75 }}
           >
             <h2 className="max-w-xl text-4xl font-semibold tracking-[-0.05em] text-slate-950 md:text-6xl">
-              Por que escolher a Borges Advocacia?
+              Conheça nosso atendimento
             </h2>
 
             <p className="mt-5 max-w-xl text-slate-600">
-              Unimos conhecimento técnico e atendimento humano para lidar com
-              situações que impactam diretamente a vida do cliente.
+              Nossa equipe jurídica analisa cada situação individualmente e explica
+              os possíveis próximos passos.
             </p>
 
             <div className="glass-card mt-8 rounded-[28px] p-5">

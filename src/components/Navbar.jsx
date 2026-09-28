@@ -2,8 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X, MapPin, MessageCircle } from "lucide-react";
 
-const WHATSAPP_URL =
-  "https://wa.me/556235824711?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20sobre%20um%20benefício%20do%20INSS.";
+import { WHATSAPP_URL } from "../data/homeContact";
 
 const links = [
   { label: "Advogados", href: "#advogados" },
@@ -59,12 +58,12 @@ export default function Navbar() {
             </nav>
 
             <a
-              href={"https://wa.me/556235824711"}
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noreferrer"
               className="hidden rounded-full bg-[#174b9a] px-5 py-2 text-sm font-semibold text-white shadow-xl shadow-blue-900/20 transition hover:-translate-y-0.5 hover:bg-[#0d2f68] lg:inline-flex"
             >
-              Falar agora
+              WhatsApp
             </a>
 
             <button
@@ -72,6 +71,8 @@ export default function Navbar() {
               onClick={() => setOpen(true)}
               className="grid h-11 w-11 place-items-center rounded-full bg-[#174b9a] text-white shadow-2xl shadow-blue-900/30 transition hover:-translate-y-0.5 lg:hidden"
               aria-label="Abrir menu"
+              aria-expanded={open}
+              aria-controls="mobile-menu"
             >
               <Menu size={20} />
             </button>
@@ -88,13 +89,13 @@ export default function Navbar() {
             exit={{ opacity: 0 }}
             onClick={closeMenu}
           >
-            <motion.aside
+            <motion.aside id="mobile-menu"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", stiffness: 260, damping: 28 }}
               onClick={(event) => event.stopPropagation()}
-              className="ml-auto flex h-full w-[86%] max-w-sm flex-col bg-[#f8fbff] p-6 shadow-2xl shadow-slate-950/30"
+              className="ml-auto flex h-full overflow-y-auto w-[86%] max-w-sm flex-col bg-[#f8fbff] p-6 shadow-2xl shadow-slate-950/30"
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
@@ -152,13 +153,13 @@ export default function Navbar() {
                 </a>
 
                 <a
-                  href={"https://wa.me/556235824711"}
+                  href={WHATSAPP_URL}
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center justify-center gap-2 rounded-full bg-[#174b9a] px-5 py-4 text-sm font-bold text-white shadow-xl shadow-blue-900/20"
                 >
                   <MessageCircle size={18} />
-                  Falar no WhatsApp
+                  Falar pelo WhatsApp
                 </a>
 
                 <p className="px-2 text-center text-xs leading-5 text-slate-500">

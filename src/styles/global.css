@@ -180,3 +180,7 @@ a[class*="bg-blue"] svg,
   stroke: #ffffff !important;
   color: #ffffff !important;
 }
+section[id], article[id] { scroll-margin-top: 110px; }
+.hero-facade { object-position: center 65%; }
+.hero-facade { transform: scale(1.4); transform-origin: left center; }
+main { overflow-x: clip; }
