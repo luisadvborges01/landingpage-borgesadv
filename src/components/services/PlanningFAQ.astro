@@ -1,0 +1,7 @@
+---
+import { faqs } from '../../data/planning';
+---
+<section id="duvidas" class="section split">
+  <div><p class="eyebrow">Perguntas frequentes</p><h2>Dúvidas que merecem uma resposta clara.</h2><p>Dos recolhimentos ao momento de pedir a aposentadoria.</p></div>
+  <div class="faq-list">{faqs.map(([question, answer]) => <details><summary>{question}<span aria-hidden="true">+</span></summary><div class="faq-answer"><p>{answer}</p></div></details>)}</div>
+</section>

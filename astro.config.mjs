@@ -14,7 +14,7 @@ export default defineConfig({
     react(),
     sitemap({
       // Only reviewed, indexable pages. NFC cards must stay excluded.
-      filter: (page) => new URL(page).pathname === '/',
+      filter: (page) => ['/', '/planejamento-previdenciario/'].includes(new URL(page).pathname),
     }),
     {
       name: 'sitemap-public-url',

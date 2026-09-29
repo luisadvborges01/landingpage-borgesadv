@@ -1,0 +1,14 @@
+---
+const steps = [
+  { title: 'Histórico', label: 'Reconstruir', href: '#historico', text: 'Onde você trabalhou, como contribuiu e o que os documentos registram.', tags: 'Vínculos · CNIS · Documentos' },
+  { title: 'Situação atual', label: 'Conferir', href: '#contribuicoes', text: 'O que está consistente, o que exige atenção e como você contribui hoje.', tags: 'Categoria · Recolhimentos · Pendências' },
+  { title: 'Cenários', label: 'Compreender', href: '#cenarios', text: 'Quais possibilidades merecem análise e de quais premissas elas dependem.', tags: 'Regras · Possibilidades · Limites' },
+];
+---
+<section class="journey" aria-labelledby="journey-title">
+  <div class="journey-heading"><p class="eyebrow">Um percurso de análise</p><h2 id="journey-title">Do que você viveu às decisões que vêm pela frente.</h2></div>
+  <ol class="journey-grid">
+    {steps.map((step) => <li><a href={step.href} data-journey-link><span class="eyebrow">{step.label}</span><h3>{step.title}<span aria-hidden="true">↗</span></h3><p>{step.text}</p><span class="journey-tags">{step.tags}</span><span class="journey-link">Explorar esta etapa <span aria-hidden="true">→</span></span></a></li>)}
+  </ol>
+  <p class="journey-note">Histórico → Situação atual → Cenários. Um roteiro para entender a análise, sem cálculo ou conclusão automática.</p>
+</section>

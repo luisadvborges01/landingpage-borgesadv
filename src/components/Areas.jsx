@@ -15,6 +15,7 @@ export default function Areas() {
       <article id={id} key={id} className="glass-card min-w-0 rounded-[30px] p-7">
         <div className="mb-6 grid h-14 w-14 place-items-center rounded-2xl bg-[#174b9a] text-white shadow-xl shadow-blue-900/20"><Icon size={26} /></div>
         <h3 className="text-2xl font-semibold text-slate-950">{title}</h3><p className="mt-3 text-sm leading-6 text-slate-600">{text}</p>
+        {id === 'aposentadorias' && <a href="/planejamento-previdenciario/" className="mt-4 inline-block text-sm font-semibold underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4">Entenda o planejamento previdenciário →</a>}
       </article>)}</div>
   </div></section>;
 }

@@ -1,0 +1,72 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://borgesprev.com.br/planejamento-previdenciario/#webpage",
+      "url": "https://borgesprev.com.br/planejamento-previdenciario/",
+      "name": "Planejamento Previdenciário e análise do CNIS | Borges Advocacia",
+      "description": "Saiba como o planejamento previdenciário organiza CNIS, contribuições e documentos para avaliar cenários de aposentadoria e orientar decisões.",
+      "inLanguage": "pt-BR",
+      "isPartOf": {
+        "@id": "https://borgesprev.com.br/#website"
+      },
+      "publisher": {
+        "@id": "https://borgesprev.com.br/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://borgesprev.com.br/planejamento-previdenciario/#breadcrumb"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://borgesprev.com.br/img/fachada.jpeg"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://borgesprev.com.br/planejamento-previdenciario/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://borgesprev.com.br/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Planejamento Previdenciário",
+          "item": "https://borgesprev.com.br/planejamento-previdenciario/"
+        }
+      ]
+    },
+    {
+      "@type": "LegalService",
+      "@id": "https://borgesprev.com.br/#organization",
+      "name": "Borges Advocacia",
+      "url": "https://borgesprev.com.br/",
+      "telephone": "+556235824711",
+      "image": "https://borgesprev.com.br/img/fachada.jpeg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "R. Canana, Qd. 201 - Lt. 03, Sala 02 - Parque Amazônia",
+        "addressLocality": "Goiânia",
+        "addressRegion": "GO",
+        "addressCountry": "BR"
+      },
+      "sameAs": [
+        "https://www.instagram.com/borgesadvprevidencia/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://borgesprev.com.br/#website",
+      "url": "https://borgesprev.com.br/",
+      "name": "Borges Advocacia",
+      "inLanguage": "pt-BR",
+      "publisher": {
+        "@id": "https://borgesprev.com.br/#organization"
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+---
+import { planning } from '../../data/planning';
+const { title = 'Seu próximo passo pode começar com uma conversa.', text = 'Conte em que momento você está. A equipe orientará sobre o atendimento e os documentos necessários para compreender sua situação.', compact = false } = Astro.props;
+---
+<aside class:list={['contact-panel', { compact }]} aria-label="Contato com Borges Advocacia">
+  <div><p class="eyebrow">Borges Advocacia · Direito Previdenciário</p><h2>{title}</h2><p>{text}</p></div>
+  <div class="contact-action"><a class="button" href={planning.whatsapp} target="_blank" rel="noopener noreferrer">Converse com a equipe <span aria-hidden="true">↗</span></a><span>WhatsApp do escritório</span></div>
+</aside>
