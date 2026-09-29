@@ -14,6 +14,7 @@ export const homeSchema = {
       name: officeContact.displayName,
       url: siteUrl,
       logo: new URL('/img/logo.png', siteUrl).href,
+      image: new URL('/img/fachada.jpeg', siteUrl).href,
       telephone: officeContact.phoneE164,
       email: 'borgesadvprevi@gmail.com',
       address: {
