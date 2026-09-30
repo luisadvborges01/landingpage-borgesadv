@@ -1,0 +1,4 @@
+---
+const { items } = Astro.props;
+---
+<section class="sources" aria-labelledby="sources-title"><h2 id="sources-title">Fontes oficiais e referências</h2><p>Referências consultadas em 29 de setembro de 2026. As regras dependem da época, da categoria e das provas de cada caso. Conteúdo informativo, sem conclusão jurídica individual.</p><ul>{items.map(([label,href]: string[]) => <li><a href={href}>{label}</a></li>)}</ul></section>

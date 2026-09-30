@@ -45,18 +45,34 @@
       "@id": "https://borgesprev.com.br/#organization",
       "name": "Borges Advocacia",
       "url": "https://borgesprev.com.br/",
-      "telephone": "+556235824711",
+      "logo": "https://borgesprev.com.br/img/logo.png",
       "image": "https://borgesprev.com.br/img/fachada.jpeg",
+      "telephone": "+556235824711",
+      "email": "borgesadvprevi@gmail.com",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "R. Canana, Qd. 201 - Lt. 03, Sala 02 - Parque Amazônia",
         "addressLocality": "Goiânia",
-        "addressRegion": "GO",
-        "addressCountry": "BR"
+        "addressRegion": "Goiás",
+        "addressCountry": "BR",
+        "postalCode": "74835-595"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "07:30",
+        "closes": "18:00"
       },
       "sameAs": [
         "https://www.instagram.com/borgesadvprevidencia/"
-      ]
+      ],
+      "knowsAbout": "Direito Previdenciário"
     },
     {
       "@type": "WebSite",

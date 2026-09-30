@@ -1,0 +1,4 @@
+---
+const { context } = Astro.props;
+---
+<section class="section" id="atendimento"><div class="section-heading"><p class="eyebrow">Como funciona o atendimento</p><h2>Entender a situação antes de definir os próximos passos.</h2><p>{context} O escopo e as condições do serviço são esclarecidos previamente, sem promessa de resultado.</p></div><ol class="process-list">{[['Contato inicial','Você apresenta sua dúvida, sem precisar enviar documentos sensíveis de imediato.'],['Entendimento','A equipe identifica as informações relevantes para o caso.'],['Documentos','A análise segue o escopo do serviço previamente combinado.'],['Orientação','São explicados os pontos identificados e os caminhos juridicamente cabíveis.'],['Próximos passos','As providências são discutidas conforme o caso, sem garantia de concessão.']].map(([title,text]) => <li><h3>{title}</h3><p>{text}</p></li>)}</ol></section>

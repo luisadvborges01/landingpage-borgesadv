@@ -28,7 +28,7 @@ assert(!schema['@graph'].some(n=>n['@type']==='FAQPage'));
 assert.equal(schema['@graph'].find(n=>n['@type']==='WebPage').url,url);
 const sitemap=await readFile('dist/sitemap-0.xml','utf8');
 assert(sitemap.includes(url));assert(sitemap.includes('<loc>https://borgesprev.com.br/</loc>'));
-assert(!sitemap.includes('/cartao/'));assert.equal((sitemap.match(/<url>/g)??[]).length,2);
+assert(!sitemap.includes('/cartao/'));assert.equal((sitemap.match(/<url>/g)??[]).length,8);
 assert.equal(await readFile('dist/sitemap.xml','utf8'),await readFile('dist/sitemap-index.xml','utf8'));
 assert.equal(await readFile('dist/robots.txt','utf8'),await readFile('public/robots.txt','utf8'));
 assert.equal(await readFile('dist/645afb922843d07af397741fac293c8f.txt','utf8'),await readFile('public/645afb922843d07af397741fac293c8f.txt','utf8'));
@@ -37,4 +37,4 @@ for(const n of nodes){const ref=n.tagName==='link'&&attr(n,'rel')==='stylesheet'
 const inlineJs=tags('script').filter(n=>!attr(n,'src')&&attr(n,'type')!=='application/ld+json').map(content).join('\n');
 if(inlineJs)assets.push({file:'inline JavaScript',bytes:Buffer.byteLength(inlineJs),gzip:gzipSync(inlineJs).length});
 await writeFile('docs/planning-schema.json',JSON.stringify(schema,null,2)+'\n');
-console.log(JSON.stringify({result:'PASS',h1:1,faqAnswersInHtml:9,images:tags('img').length,astroIslands:0,sitemapUrls:2,assets,schema:'docs/planning-schema.json'},null,2));
+console.log(JSON.stringify({result:'PASS',h1:1,faqAnswersInHtml:9,images:tags('img').length,astroIslands:0,sitemapUrls:8,assets,schema:'docs/planning-schema.json'},null,2));

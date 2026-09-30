@@ -1,0 +1,4 @@
+---
+const { items } = Astro.props;
+---
+<section class="section" id="erros"><div class="section-heading"><p class="eyebrow">Cuidados na análise</p><h2>Erros que podem dificultar o entendimento do caso.</h2></div><div class="mistakes">{items.map(([title, reason, care]: string[], index: number) => <article><span class="mistake-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><div><h3>{title}</h3><p>{reason}</p><p class="care"><strong>O cuidado:</strong> {care}</p></div></article>)}</div></section>

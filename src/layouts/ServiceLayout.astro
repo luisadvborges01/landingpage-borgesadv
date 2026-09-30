@@ -1,0 +1,32 @@
+---
+import '../styles/planning.css';
+import '../styles/services.css';
+import { Image } from 'astro:assets';
+import logo from '../../public/img/logo.png';
+import { officeContact } from '../data/professionalCards';
+import { SITE, serviceSchema } from '../data/serviceSchema';
+const { page } = Astro.props;
+const canonical = `${SITE}/${page.slug}/`;
+---
+<!doctype html>
+<html lang="pt-BR"><head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{page.title}</title><meta name="description" content={page.description} /><link rel="canonical" href={canonical} />
+  <meta name="theme-color" content="#174b9a" /><link rel="icon" href="/favicon.png" type="image/png" />
+  <meta property="og:type" content="website" /><meta property="og:locale" content="pt_BR" /><meta property="og:site_name" content="Borges Advocacia" />
+  <meta property="og:title" content={page.title} /><meta property="og:description" content={page.description} /><meta property="og:url" content={canonical} />
+  <meta property="og:image" content={`${SITE}/img/fachada.jpeg`} /><meta property="og:image:alt" content="Fachada da Borges Advocacia em Goiânia" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema(page.slug, page.title, page.description, page.h1, page.parent)).replace(/</g, '\\u003c')} />
+</head><body class={`service-page service-${page.slug}`}>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="/" aria-label="Borges Advocacia — início"><Image src={logo} alt="" width={46} height={46} fit="contain" loading="eager" /><span>Borges Advocacia<small>Direito Previdenciário</small></span></a>
+    <nav aria-label="Navegação principal"><a href="/#advogados">O escritório</a><a class="header-contact" href="#contato">Fale com a equipe <span aria-hidden="true">↗</span></a></nav>
+  </div></header>
+  <main id="conteudo" class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Início</a></li>{page.parent && <li><a href="/aposentadoria/">Aposentadoria</a></li>}<li aria-current="page">{page.h1}</li></ol></nav>
+    <slot />
+  </main>
+  <footer><div class="container footer-inner"><div><a class="footer-brand" href="/">Borges Advocacia</a><p>Direito Previdenciário · Goiânia/GO</p></div><div><a href={`tel:${officeContact.phoneE164}`}>{officeContact.phoneDisplay}</a><a href={officeContact.links.instagram}>Instagram do escritório</a><a href="/">Voltar ao início</a></div><p class="footer-notice">Informações gerais, que não substituem análise jurídica individual. © {new Date().getFullYear()} Borges Advocacia.</p></div></footer>
+</body></html>

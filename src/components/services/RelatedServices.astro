@@ -1,0 +1,4 @@
+---
+const { items } = Astro.props;
+---
+<nav class="section related-services" aria-labelledby="related-title"><p class="eyebrow">Continue a leitura</p><h2 id="related-title">Conteúdos relacionados à sua dúvida.</h2><div>{items.map(([href,title,text]: string[]) => <a href={href}><h3>{title} <span aria-hidden="true">↗</span></h3><p>{text}</p></a>)}</div></nav>

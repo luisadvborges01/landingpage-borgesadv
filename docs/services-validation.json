@@ -1,0 +1,838 @@
+{
+  "result": "PASS",
+  "sitemap": [
+    "https://borgesprev.com.br/",
+    "https://borgesprev.com.br/aposentadoria-especial/",
+    "https://borgesprev.com.br/aposentadoria-rural/",
+    "https://borgesprev.com.br/aposentadoria/",
+    "https://borgesprev.com.br/beneficio-por-incapacidade/",
+    "https://borgesprev.com.br/bpc-loas/",
+    "https://borgesprev.com.br/pensao-por-morte/",
+    "https://borgesprev.com.br/planejamento-previdenciario/"
+  ],
+  "pages": [
+    {
+      "slug": "aposentadoria",
+      "title": "Aposentadoria pelo INSS: regras e documentos | Borges Advocacia",
+      "description": "Entenda as possibilidades de aposentadoria pelo INSS, a importância do CNIS e os documentos que ajudam na análise do seu histórico previdenciário.",
+      "canonical": "https://borgesprev.com.br/aposentadoria/",
+      "h1": "Aposentadoria pelo INSS",
+      "faq": 7,
+      "htmlBytes": 24334,
+      "assets": [
+        {
+          "file": "/_astro/fachada.BlROezaR.css",
+          "bytes": 15487,
+          "gzip": 4002
+        },
+        {
+          "file": "/_astro/EditorialSources.uyTvJXVK.css",
+          "bytes": 9326,
+          "gzip": 2361
+        }
+      ],
+      "internalLinks": [
+        "/",
+        "/#advogados",
+        "/planejamento-previdenciario/",
+        "/aposentadoria-rural/",
+        "/aposentadoria-especial/",
+        "/#localizacao"
+      ],
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "LegalService",
+            "@id": "https://borgesprev.com.br/#organization",
+            "name": "Borges Advocacia",
+            "url": "https://borgesprev.com.br/",
+            "logo": "https://borgesprev.com.br/img/logo.png",
+            "image": "https://borgesprev.com.br/img/fachada.jpeg",
+            "telephone": "+556235824711",
+            "email": "borgesadvprevi@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "R. Canana, Qd. 201 - Lt. 03, Sala 02 - Parque Amazônia",
+              "addressLocality": "Goiânia",
+              "addressRegion": "Goiás",
+              "addressCountry": "BR",
+              "postalCode": "74835-595"
+            },
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "07:30",
+              "closes": "18:00"
+            },
+            "sameAs": [
+              "https://www.instagram.com/borgesadvprevidencia/"
+            ],
+            "knowsAbout": "Direito Previdenciário"
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://borgesprev.com.br/#website",
+            "url": "https://borgesprev.com.br/",
+            "name": "Borges Advocacia",
+            "inLanguage": "pt-BR",
+            "publisher": {
+              "@id": "https://borgesprev.com.br/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://borgesprev.com.br/aposentadoria/#webpage",
+            "url": "https://borgesprev.com.br/aposentadoria/",
+            "name": "Aposentadoria pelo INSS: regras e documentos | Borges Advocacia",
+            "description": "Entenda as possibilidades de aposentadoria pelo INSS, a importância do CNIS e os documentos que ajudam na análise do seu histórico previdenciário.",
+            "inLanguage": "pt-BR",
+            "isPartOf": {
+              "@id": "https://borgesprev.com.br/#website"
+            },
+            "publisher": {
+              "@id": "https://borgesprev.com.br/#organization"
+            },
+            "breadcrumb": {
+              "@id": "https://borgesprev.com.br/aposentadoria/#breadcrumb"
+            },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://borgesprev.com.br/img/fachada.jpeg"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://borgesprev.com.br/aposentadoria/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Início",
+                "item": "https://borgesprev.com.br/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Aposentadoria pelo INSS",
+                "item": "https://borgesprev.com.br/aposentadoria/"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "slug": "planejamento-previdenciario",
+      "title": "Planejamento Previdenciário e análise do CNIS | Borges Advocacia",
+      "description": "Saiba como o planejamento previdenciário organiza CNIS, contribuições e documentos para avaliar cenários de aposentadoria e orientar decisões.",
+      "canonical": "https://borgesprev.com.br/planejamento-previdenciario/",
+      "h1": "Planejamento Previdenciário",
+      "faq": 9,
+      "htmlBytes": 35311,
+      "assets": [
+        {
+          "file": "/_astro/fachada.BlROezaR.css",
+          "bytes": 15487,
+          "gzip": 4002
+        },
+        {
+          "file": "inline JavaScript",
+          "bytes": 467,
+          "gzip": 300
+        }
+      ],
+      "internalLinks": [
+        "/",
+        "/#advogados",
+        "/aposentadoria-rural/",
+        "/aposentadoria-especial/",
+        "/aposentadoria/",
+        "/#localizacao"
+      ],
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://borgesprev.com.br/planejamento-previdenciario/#webpage",
+            "url": "https://borgesprev.com.br/planejamento-previdenciario/",
+            "name": "Planejamento Previdenciário e análise do CNIS | Borges Advocacia",
+            "description": "Saiba como o planejamento previdenciário organiza CNIS, contribuições e documentos para avaliar cenários de aposentadoria e orientar decisões.",
+            "inLanguage": "pt-BR",
+            "isPartOf": {
+              "@id": "https://borgesprev.com.br/#website"
+            },
+            "publisher": {
+              "@id": "https://borgesprev.com.br/#organization"
+            },
+            "breadcrumb": {
+              "@id": "https://borgesprev.com.br/planejamento-previdenciario/#breadcrumb"
+            },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://borgesprev.com.br/img/fachada.jpeg"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://borgesprev.com.br/planejamento-previdenciario/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Início",
+                "item": "https://borgesprev.com.br/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Planejamento Previdenciário",
+                "item": "https://borgesprev.com.br/planejamento-previdenciario/"
+              }
+            ]
+          },
+          {
+            "@type": "LegalService",
+            "@id": "https://borgesprev.com.br/#organization",
+            "name": "Borges Advocacia",
+            "url": "https://borgesprev.com.br/",
+            "logo": "https://borgesprev.com.br/img/logo.png",
+            "image": "https://borgesprev.com.br/img/fachada.jpeg",
+            "telephone": "+556235824711",
+            "email": "borgesadvprevi@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "R. Canana, Qd. 201 - Lt. 03, Sala 02 - Parque Amazônia",
+              "addressLocality": "Goiânia",
+              "addressRegion": "Goiás",
+              "addressCountry": "BR",
+              "postalCode": "74835-595"
+            },
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "07:30",
+              "closes": "18:00"
+            },
+            "sameAs": [
+              "https://www.instagram.com/borgesadvprevidencia/"
+            ],
+            "knowsAbout": "Direito Previdenciário"
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://borgesprev.com.br/#website",
+            "url": "https://borgesprev.com.br/",
+            "name": "Borges Advocacia",
+            "inLanguage": "pt-BR",
+            "publisher": {
+              "@id": "https://borgesprev.com.br/#organization"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "slug": "bpc-loas",
+      "title": "BPC/LOAS: requisitos e documentos | Borges Advocacia",
+      "description": "Entenda o BPC/LOAS, sua diferença para aposentadoria e os aspectos pessoais, sociais e documentais considerados na análise do benefício.",
+      "canonical": "https://borgesprev.com.br/bpc-loas/",
+      "h1": "BPC/LOAS",
+      "faq": 8,
+      "htmlBytes": 24850,
+      "assets": [
+        {
+          "file": "/_astro/fachada.BlROezaR.css",
+          "bytes": 15487,
+          "gzip": 4002
+        },
+        {
+          "file": "/_astro/EditorialSources.uyTvJXVK.css",
+          "bytes": 9326,
+          "gzip": 2361
+        }
+      ],
+      "internalLinks": [
+        "/",
+        "/#advogados",
+        "/beneficio-por-incapacidade/",
+        "/#localizacao"
+      ],
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "LegalService",
+            "@id": "https://borgesprev.com.br/#organization",
+            "name": "Borges Advocacia",
+            "url": "https://borgesprev.com.br/",
+            "logo": "https://borgesprev.com.br/img/logo.png",
+            "image": "https://borgesprev.com.br/img/fachada.jpeg",
+            "telephone": "+556235824711",
+            "email": "borgesadvprevi@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "R. Canana, Qd. 201 - Lt. 03, Sala 02 - Parque Amazônia",
+              "addressLocality": "Goiânia",
+              "addressRegion": "Goiás",
+              "addressCountry": "BR",
+              "postalCode": "74835-595"
+            },
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "07:30",
+              "closes": "18:00"
+            },
+            "sameAs": [
+              "https://www.instagram.com/borgesadvprevidencia/"
+            ],
+            "knowsAbout": "Direito Previdenciário"
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://borgesprev.com.br/#website",
+            "url": "https://borgesprev.com.br/",
+            "name": "Borges Advocacia",
+            "inLanguage": "pt-BR",
+            "publisher": {
+              "@id": "https://borgesprev.com.br/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://borgesprev.com.br/bpc-loas/#webpage",
+            "url": "https://borgesprev.com.br/bpc-loas/",
+            "name": "BPC/LOAS: requisitos e documentos | Borges Advocacia",
+            "description": "Entenda o BPC/LOAS, sua diferença para aposentadoria e os aspectos pessoais, sociais e documentais considerados na análise do benefício.",
+            "inLanguage": "pt-BR",
+            "isPartOf": {
+              "@id": "https://borgesprev.com.br/#website"
+            },
+            "publisher": {
+              "@id": "https://borgesprev.com.br/#organization"
+            },
+            "breadcrumb": {
+              "@id": "https://borgesprev.com.br/bpc-loas/#breadcrumb"
+            },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://borgesprev.com.br/img/fachada.jpeg"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://borgesprev.com.br/bpc-loas/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Início",
+                "item": "https://borgesprev.com.br/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "BPC/LOAS",
+                "item": "https://borgesprev.com.br/bpc-loas/"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "slug": "pensao-por-morte",
+      "title": "Pensão por Morte: dependentes e documentos | Borges Advocacia",
+      "description": "Entenda quem pode ser dependente, quais documentos costumam ser analisados e o que pode influenciar a duração da pensão por morte.",
+      "canonical": "https://borgesprev.com.br/pensao-por-morte/",
+      "h1": "Pensão por Morte",
+      "faq": 7,
+      "htmlBytes": 24720,
+      "assets": [
+        {
+          "file": "/_astro/fachada.BlROezaR.css",
+          "bytes": 15487,
+          "gzip": 4002
+        },
+        {
+          "file": "/_astro/EditorialSources.uyTvJXVK.css",
+          "bytes": 9326,
+          "gzip": 2361
+        }
+      ],
+      "internalLinks": [
+        "/",
+        "/#advogados",
+        "/aposentadoria-rural/",
+        "/#localizacao"
+      ],
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "LegalService",
+            "@id": "https://borgesprev.com.br/#organization",
+            "name": "Borges Advocacia",
+            "url": "https://borgesprev.com.br/",
+            "logo": "https://borgesprev.com.br/img/logo.png",
+            "image": "https://borgesprev.com.br/img/fachada.jpeg",
+            "telephone": "+556235824711",
+            "email": "borgesadvprevi@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "R. Canana, Qd. 201 - Lt. 03, Sala 02 - Parque Amazônia",
+              "addressLocality": "Goiânia",
+              "addressRegion": "Goiás",
+              "addressCountry": "BR",
+              "postalCode": "74835-595"
+            },
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "07:30",
+              "closes": "18:00"
+            },
+            "sameAs": [
+              "https://www.instagram.com/borgesadvprevidencia/"
+            ],
+            "knowsAbout": "Direito Previdenciário"
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://borgesprev.com.br/#website",
+            "url": "https://borgesprev.com.br/",
+            "name": "Borges Advocacia",
+            "inLanguage": "pt-BR",
+            "publisher": {
+              "@id": "https://borgesprev.com.br/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://borgesprev.com.br/pensao-por-morte/#webpage",
+            "url": "https://borgesprev.com.br/pensao-por-morte/",
+            "name": "Pensão por Morte: dependentes e documentos | Borges Advocacia",
+            "description": "Entenda quem pode ser dependente, quais documentos costumam ser analisados e o que pode influenciar a duração da pensão por morte.",
+            "inLanguage": "pt-BR",
+            "isPartOf": {
+              "@id": "https://borgesprev.com.br/#website"
+            },
+            "publisher": {
+              "@id": "https://borgesprev.com.br/#organization"
+            },
+            "breadcrumb": {
+              "@id": "https://borgesprev.com.br/pensao-por-morte/#breadcrumb"
+            },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://borgesprev.com.br/img/fachada.jpeg"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://borgesprev.com.br/pensao-por-morte/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Início",
+                "item": "https://borgesprev.com.br/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Pensão por Morte",
+                "item": "https://borgesprev.com.br/pensao-por-morte/"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "slug": "beneficio-por-incapacidade",
+      "title": "Benefícios por Incapacidade no INSS | Borges Advocacia",
+      "description": "Conheça as diferenças entre benefícios por incapacidade temporária e permanente e a importância da documentação médica e do histórico previdenciário.",
+      "canonical": "https://borgesprev.com.br/beneficio-por-incapacidade/",
+      "h1": "Benefícios por Incapacidade",
+      "faq": 7,
+      "htmlBytes": 25782,
+      "assets": [
+        {
+          "file": "/_astro/fachada.BlROezaR.css",
+          "bytes": 15487,
+          "gzip": 4002
+        },
+        {
+          "file": "/_astro/EditorialSources.uyTvJXVK.css",
+          "bytes": 9326,
+          "gzip": 2361
+        }
+      ],
+      "internalLinks": [
+        "/",
+        "/#advogados",
+        "/bpc-loas/",
+        "/#localizacao"
+      ],
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "LegalService",
+            "@id": "https://borgesprev.com.br/#organization",
+            "name": "Borges Advocacia",
+            "url": "https://borgesprev.com.br/",
+            "logo": "https://borgesprev.com.br/img/logo.png",
+            "image": "https://borgesprev.com.br/img/fachada.jpeg",
+            "telephone": "+556235824711",
+            "email": "borgesadvprevi@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "R. Canana, Qd. 201 - Lt. 03, Sala 02 - Parque Amazônia",
+              "addressLocality": "Goiânia",
+              "addressRegion": "Goiás",
+              "addressCountry": "BR",
+              "postalCode": "74835-595"
+            },
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "07:30",
+              "closes": "18:00"
+            },
+            "sameAs": [
+              "https://www.instagram.com/borgesadvprevidencia/"
+            ],
+            "knowsAbout": "Direito Previdenciário"
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://borgesprev.com.br/#website",
+            "url": "https://borgesprev.com.br/",
+            "name": "Borges Advocacia",
+            "inLanguage": "pt-BR",
+            "publisher": {
+              "@id": "https://borgesprev.com.br/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://borgesprev.com.br/beneficio-por-incapacidade/#webpage",
+            "url": "https://borgesprev.com.br/beneficio-por-incapacidade/",
+            "name": "Benefícios por Incapacidade no INSS | Borges Advocacia",
+            "description": "Conheça as diferenças entre benefícios por incapacidade temporária e permanente e a importância da documentação médica e do histórico previdenciário.",
+            "inLanguage": "pt-BR",
+            "isPartOf": {
+              "@id": "https://borgesprev.com.br/#website"
+            },
+            "publisher": {
+              "@id": "https://borgesprev.com.br/#organization"
+            },
+            "breadcrumb": {
+              "@id": "https://borgesprev.com.br/beneficio-por-incapacidade/#breadcrumb"
+            },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://borgesprev.com.br/img/fachada.jpeg"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://borgesprev.com.br/beneficio-por-incapacidade/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Início",
+                "item": "https://borgesprev.com.br/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Benefícios por Incapacidade",
+                "item": "https://borgesprev.com.br/beneficio-por-incapacidade/"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "slug": "aposentadoria-rural",
+      "title": "Aposentadoria Rural: atividade e documentos | Borges Advocacia",
+      "description": "Entenda a aposentadoria rural, o enquadramento do segurado especial e como documentos e períodos de trabalho entram na análise previdenciária.",
+      "canonical": "https://borgesprev.com.br/aposentadoria-rural/",
+      "h1": "Aposentadoria Rural",
+      "faq": 7,
+      "htmlBytes": 23577,
+      "assets": [
+        {
+          "file": "/_astro/fachada.BlROezaR.css",
+          "bytes": 15487,
+          "gzip": 4002
+        },
+        {
+          "file": "/_astro/EditorialSources.uyTvJXVK.css",
+          "bytes": 9326,
+          "gzip": 2361
+        }
+      ],
+      "internalLinks": [
+        "/",
+        "/#advogados",
+        "/aposentadoria/",
+        "/planejamento-previdenciario/",
+        "/#localizacao"
+      ],
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "LegalService",
+            "@id": "https://borgesprev.com.br/#organization",
+            "name": "Borges Advocacia",
+            "url": "https://borgesprev.com.br/",
+            "logo": "https://borgesprev.com.br/img/logo.png",
+            "image": "https://borgesprev.com.br/img/fachada.jpeg",
+            "telephone": "+556235824711",
+            "email": "borgesadvprevi@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "R. Canana, Qd. 201 - Lt. 03, Sala 02 - Parque Amazônia",
+              "addressLocality": "Goiânia",
+              "addressRegion": "Goiás",
+              "addressCountry": "BR",
+              "postalCode": "74835-595"
+            },
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "07:30",
+              "closes": "18:00"
+            },
+            "sameAs": [
+              "https://www.instagram.com/borgesadvprevidencia/"
+            ],
+            "knowsAbout": "Direito Previdenciário"
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://borgesprev.com.br/#website",
+            "url": "https://borgesprev.com.br/",
+            "name": "Borges Advocacia",
+            "inLanguage": "pt-BR",
+            "publisher": {
+              "@id": "https://borgesprev.com.br/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://borgesprev.com.br/aposentadoria-rural/#webpage",
+            "url": "https://borgesprev.com.br/aposentadoria-rural/",
+            "name": "Aposentadoria Rural: atividade e documentos | Borges Advocacia",
+            "description": "Entenda a aposentadoria rural, o enquadramento do segurado especial e como documentos e períodos de trabalho entram na análise previdenciária.",
+            "inLanguage": "pt-BR",
+            "isPartOf": {
+              "@id": "https://borgesprev.com.br/#website"
+            },
+            "publisher": {
+              "@id": "https://borgesprev.com.br/#organization"
+            },
+            "breadcrumb": {
+              "@id": "https://borgesprev.com.br/aposentadoria-rural/#breadcrumb"
+            },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://borgesprev.com.br/img/fachada.jpeg"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://borgesprev.com.br/aposentadoria-rural/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Início",
+                "item": "https://borgesprev.com.br/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Aposentadoria",
+                "item": "https://borgesprev.com.br/aposentadoria/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Aposentadoria Rural",
+                "item": "https://borgesprev.com.br/aposentadoria-rural/"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "slug": "aposentadoria-especial",
+      "title": "Aposentadoria Especial: PPP e exposição | Borges Advocacia",
+      "description": "Entenda a análise da aposentadoria especial, a função do PPP e do LTCAT e a importância dos períodos e da documentação sobre exposição.",
+      "canonical": "https://borgesprev.com.br/aposentadoria-especial/",
+      "h1": "Aposentadoria Especial",
+      "faq": 7,
+      "htmlBytes": 25915,
+      "assets": [
+        {
+          "file": "/_astro/fachada.BlROezaR.css",
+          "bytes": 15487,
+          "gzip": 4002
+        },
+        {
+          "file": "/_astro/EditorialSources.uyTvJXVK.css",
+          "bytes": 9326,
+          "gzip": 2361
+        }
+      ],
+      "internalLinks": [
+        "/",
+        "/#advogados",
+        "/aposentadoria/",
+        "/planejamento-previdenciario/",
+        "/#localizacao"
+      ],
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "LegalService",
+            "@id": "https://borgesprev.com.br/#organization",
+            "name": "Borges Advocacia",
+            "url": "https://borgesprev.com.br/",
+            "logo": "https://borgesprev.com.br/img/logo.png",
+            "image": "https://borgesprev.com.br/img/fachada.jpeg",
+            "telephone": "+556235824711",
+            "email": "borgesadvprevi@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "R. Canana, Qd. 201 - Lt. 03, Sala 02 - Parque Amazônia",
+              "addressLocality": "Goiânia",
+              "addressRegion": "Goiás",
+              "addressCountry": "BR",
+              "postalCode": "74835-595"
+            },
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "07:30",
+              "closes": "18:00"
+            },
+            "sameAs": [
+              "https://www.instagram.com/borgesadvprevidencia/"
+            ],
+            "knowsAbout": "Direito Previdenciário"
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://borgesprev.com.br/#website",
+            "url": "https://borgesprev.com.br/",
+            "name": "Borges Advocacia",
+            "inLanguage": "pt-BR",
+            "publisher": {
+              "@id": "https://borgesprev.com.br/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://borgesprev.com.br/aposentadoria-especial/#webpage",
+            "url": "https://borgesprev.com.br/aposentadoria-especial/",
+            "name": "Aposentadoria Especial: PPP e exposição | Borges Advocacia",
+            "description": "Entenda a análise da aposentadoria especial, a função do PPP e do LTCAT e a importância dos períodos e da documentação sobre exposição.",
+            "inLanguage": "pt-BR",
+            "isPartOf": {
+              "@id": "https://borgesprev.com.br/#website"
+            },
+            "publisher": {
+              "@id": "https://borgesprev.com.br/#organization"
+            },
+            "breadcrumb": {
+              "@id": "https://borgesprev.com.br/aposentadoria-especial/#breadcrumb"
+            },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://borgesprev.com.br/img/fachada.jpeg"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://borgesprev.com.br/aposentadoria-especial/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Início",
+                "item": "https://borgesprev.com.br/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Aposentadoria",
+                "item": "https://borgesprev.com.br/aposentadoria/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Aposentadoria Especial",
+                "item": "https://borgesprev.com.br/aposentadoria-especial/"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

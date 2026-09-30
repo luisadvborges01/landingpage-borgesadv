@@ -1,0 +1,33 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import { incapacity as page } from '../../data/services';
+import ServiceHero from '../../components/services/ServiceHero.astro';
+import EditorialSection from '../../components/services/EditorialSection.astro';
+import ServiceFAQ from '../../components/services/ServiceFAQ.astro';
+import ServiceDocuments from '../../components/services/ServiceDocuments.astro';
+import ServiceMistakes from '../../components/services/ServiceMistakes.astro';
+import ServiceCTA from '../../components/services/ServiceCTA.astro';
+import OfficeIdentity from '../../components/services/OfficeIdentity.astro';
+import ServiceTimeline from '../../components/services/ServiceTimeline.astro';
+import RelatedServices from '../../components/services/RelatedServices.astro';
+import EditorialSources from '../../components/services/EditorialSources.astro';
+import IncapacityComparison from '../../components/services/IncapacityComparison.astro';
+---
+<ServiceLayout page={page}>
+  <ServiceHero page={page} variant="clinical" />
+  <IncapacityComparison />
+  <EditorialSection block={page.blocks[0]} variant="split" />
+  <EditorialSection block={page.blocks[1]} variant="cards" />
+  <ServiceDocuments items={page.documents} />
+  <EditorialSection block={page.blocks[2]} variant="split" />
+  <ServiceCTA page={page} />
+  <EditorialSection block={page.blocks[3]} variant="band" />
+  <ServiceMistakes items={page.mistakes} />
+  <ServiceFAQ items={page.faq} />
+  <ServiceTimeline />
+  <RelatedServices items={page.related} />
+  <OfficeIdentity />
+  <ServiceCTA page={page} final />
+  <EditorialSources items={page.sources} />
+</ServiceLayout>
+

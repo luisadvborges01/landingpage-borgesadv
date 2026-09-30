@@ -1,0 +1,6 @@
+---
+import { officeContact } from '../../data/professionalCards';
+const { page, final = false } = Astro.props;
+const url = `${officeContact.links.whatsapp}?text=${encodeURIComponent(`Olá. Li a página sobre ${page.h1} e gostaria de entender como funciona o atendimento.`)}`;
+---
+<aside id={final ? 'contato' : undefined} class:list={['contact-panel', { compact: !final }]} aria-label="Contato com Borges Advocacia"><div><p class="eyebrow">Borges Advocacia · Orientação individual</p><h2>{final ? page.finalTitle : page.midTitle}</h2><p>{final ? page.finalText : page.midText}</p></div><div class="contact-action"><a class="button" href={url} target="_blank" rel="noopener noreferrer">{page.cta} <span aria-hidden="true">↗</span></a><span>WhatsApp do escritório</span></div></aside>

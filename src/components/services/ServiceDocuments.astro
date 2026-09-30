@@ -1,0 +1,4 @@
+---
+const { items, title = 'Documentos que ajudam a esclarecer a situação.', intro } = Astro.props;
+---
+<section id="documentos" class="section documents-section"><div class="section-heading"><p class="eyebrow">Organização documental</p><h2>{title}</h2><p>{intro}</p></div><div class="documents-grid">{items.map(([name, text]: string[], index: number) => <article><label for={`doc-${index}`}><input id={`doc-${index}`} type="checkbox" /><span>{name}</span></label><p>{text}</p></article>)}</div><p class="section-note">Lista indicativa, variável conforme o caso. Marque os grupos que já reuniu apenas para se organizar; as marcações não são enviadas e não indicam direito ao benefício. Preserve os originais e não compartilhe senhas.</p></section>

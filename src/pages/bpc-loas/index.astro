@@ -1,0 +1,33 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import { bpc as page } from '../../data/services';
+import ServiceHero from '../../components/services/ServiceHero.astro';
+import EditorialSection from '../../components/services/EditorialSection.astro';
+import ServiceFAQ from '../../components/services/ServiceFAQ.astro';
+import ServiceDocuments from '../../components/services/ServiceDocuments.astro';
+import ServiceMistakes from '../../components/services/ServiceMistakes.astro';
+import ServiceCTA from '../../components/services/ServiceCTA.astro';
+import OfficeIdentity from '../../components/services/OfficeIdentity.astro';
+import ServiceTimeline from '../../components/services/ServiceTimeline.astro';
+import RelatedServices from '../../components/services/RelatedServices.astro';
+import EditorialSources from '../../components/services/EditorialSources.astro';
+import BpcDiagram from '../../components/services/BpcDiagram.astro';
+---
+<ServiceLayout page={page}>
+  <ServiceHero page={page} variant="social" />
+  <BpcDiagram />
+  <EditorialSection block={page.blocks[0]} variant="band" />
+  <EditorialSection block={page.blocks[1]} variant="split" />
+  <EditorialSection block={page.blocks[2]} variant="split" />
+  <ServiceDocuments items={page.documents} />
+  <ServiceCTA page={page} />
+  <EditorialSection block={page.blocks[3]} variant="cards" />
+  <ServiceMistakes items={page.mistakes} />
+  <ServiceTimeline />
+  <ServiceFAQ items={page.faq} />
+  <RelatedServices items={page.related} />
+  <OfficeIdentity />
+  <ServiceCTA page={page} final />
+  <EditorialSources items={page.sources} />
+</ServiceLayout>
+

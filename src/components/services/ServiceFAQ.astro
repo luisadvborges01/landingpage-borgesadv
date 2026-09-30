@@ -1,0 +1,4 @@
+---
+const { items, title = 'Perguntas que ajudam a compreender o tema.', intro = 'Respostas para dúvidas frequentes, com atenção às particularidades de cada situação.' } = Astro.props;
+---
+<section id="duvidas" class="section split"><div><p class="eyebrow">Perguntas frequentes</p><h2>{title}</h2><p>{intro}</p></div><div class="faq-list">{items.map(([question, answer]: string[]) => <details><summary>{question}<span aria-hidden="true">+</span></summary><div class="faq-answer"><p>{answer}</p></div></details>)}</div></section>

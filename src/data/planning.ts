@@ -1,4 +1,5 @@
 import { officeContact } from './professionalCards';
+import { institutionalGraph } from './serviceSchema';
 
 export const planning = {
   title: 'Planejamento Previdenciário e análise do CNIS | Borges Advocacia',
@@ -25,14 +26,7 @@ export const planningSchema = {
         { '@type': 'ListItem', position: 2, name: 'Planejamento Previdenciário', item: planning.canonical },
       ],
     },
-    {
-      '@type': 'LegalService', '@id': 'https://borgesprev.com.br/#organization',
-      name: officeContact.displayName, url: 'https://borgesprev.com.br/', telephone: officeContact.phoneE164,
-      image: 'https://borgesprev.com.br/img/fachada.jpeg',
-      address: { '@type': 'PostalAddress', streetAddress: `${officeContact.address.line1} - Parque Amazônia`, addressLocality: 'Goiânia', addressRegion: 'GO', addressCountry: 'BR' },
-      sameAs: [officeContact.links.instagram],
-    },
-    { '@type': 'WebSite', '@id': 'https://borgesprev.com.br/#website', url: 'https://borgesprev.com.br/', name: officeContact.displayName, inLanguage: 'pt-BR', publisher: { '@id': 'https://borgesprev.com.br/#organization' } },
+    ...institutionalGraph,
   ],
 };
 

@@ -12,7 +12,9 @@
     "astro": "astro",
     "indexnow": "node scripts/indexnow.mjs",
     "indexnow:postdeploy": "node scripts/indexnow.mjs --soft-fail",
-    "test:indexnow": "node --test scripts/indexnow.test.mjs"
+    "test:indexnow": "node --test scripts/indexnow.test.mjs",
+    "validate:planning": "node scripts/validate-planning.mjs",
+    "validate:services": "node scripts/validate-services.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^5.0.5",
